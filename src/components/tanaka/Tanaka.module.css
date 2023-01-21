@@ -1,0 +1,43 @@
+.orbit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  aspect-ratio: 1/1;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  position: absolute;
+  top: -7.5vw;
+  animation: revolve 8s linear infinite;
+}
+
+.tanaka{
+  background-color: #246EB9;
+  width: 2.5vw;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  transform: translateY(-7.5vw);
+}
+
+/*Responsive*/
+@media (orientation: portrait) {
+  .orbit {
+    width: 15vh;
+    top: -7.5vh;
+  }
+  .tanaka {
+    width: 2.5vh;
+    transform: translateY(-7.5vh);
+  }
+}
+
+/*Animation*/
+@keyframes revolve{
+  0%{
+    transform:rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(-360deg);
+  }
+}
