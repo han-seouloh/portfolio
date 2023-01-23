@@ -2,13 +2,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10vw;
+  width: 8vw;
   aspect-ratio: 1/1;
-  border: 1px solid lightgray;
+  outline: 1px solid lightgray;
   border-radius: 50%;
   position: absolute;
-  bottom: -5vw;
+  bottom: -4vw;
   animation: revolve 15s linear infinite;
+}
+
+.orbit-hover {
+  outline: 2px solid #F06543;
+}
+
+.pause {
+  animation-play-state: paused;
 }
 
 .experience{
@@ -16,8 +24,12 @@
   width: 3vw;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  transform: translateY(5vw);
+  transform: translateY(4vw);
   position: absolute;
+}
+
+.experience:hover {
+  cursor: pointer;
 }
 
 /*Responsive*/
