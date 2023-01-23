@@ -8,12 +8,12 @@
   border-radius: 50%;
   position: absolute;
   bottom: -5vw;
-  animation: revolve 5s linear infinite;
+  animation: revolve 15s linear infinite;
 }
 
 .experience{
   background-color: #F06543;
-  width: 2.5vw;
+  width: 3vw;
   aspect-ratio: 1/1;
   border-radius: 50%;
   transform: translateY(5vw);

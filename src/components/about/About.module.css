@@ -7,16 +7,17 @@
   border: 1px solid lightgray;
   border-radius: 50%;
   position: absolute;
-  animation: revolve 7.5s linear infinite;
+  animation: revolve 20s linear infinite;
 }
 
 .about {
   display: flex;
   background-color: #F5EE9E;
-  width: 2.5vw;
+  width: 3vw;
   aspect-ratio: 1/1;
   border-radius: 50%;
   transform: translateY(5vw);
+  z-index: 2;
 }
 
 /*Responsive*/
