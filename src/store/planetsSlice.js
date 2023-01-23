@@ -5,34 +5,50 @@ export const planetsSlice = createSlice({
   initialState: {
     planets: {
       about: {
-        visibility: true,
+        focus: false,
+        hover: false,
         animation: true
       },
       experience: {
-        visibility: true,
+        focus: false,
+        hover: false,
+        animation: true
+      },
+      current: {
+        focus: false,
+        hover: false,
         animation: true
       },
       projects: {
-        visibility: true,
+        focus: false,
+        hover: false,
         animation: true
       },
       minireddit: {
-        visibility: true,
+        focus: false,
+        hover: false,
         animation: true
       },
       tanaka: {
-        visibility: true,
+        focus: false,
+        hover: false,
         animation: true
       }
     }
   },
   reducers: {
-    setPlanet: (state, action) => {
-      state.planets[action.payload.name] = action.payload.stateChange;
+    setPlanetAnimation: (state, action) => {
+      const allPlanets = Object.getOwnPropertyNames(state.planets);
+      allPlanets.forEach(planet => {
+        state.planets[planet].animation = action.payload;
+      });
+    },
+    setPlanetOrbit: (state, action) => {
+      state.planets[action.payload.name].hover = action.payload.payload;
     }
   }
 });
 
 export const selectPlanets = state => state.planets;
-export const { setPlanet } = planetsSlice.actions;
+export const { setPlanetAnimation, setPlanetOrbit } = planetsSlice.actions;
 export default planetsSlice.reducer;
