@@ -4,11 +4,19 @@
   align-items: center;
   width: 15vw;
   aspect-ratio: 1/1;
-  border: 1px solid lightgray;
+  outline: 1px solid lightgray;
   border-radius: 50%;
   position: absolute;
   top: -7.5vw;
   animation: revolve 15s linear infinite;
+}
+
+.orbit-hover {
+  outline: 2px solid #246EB9;
+}
+
+.pause {
+  animation-play-state: paused;
 }
 
 .tanaka{
@@ -17,7 +25,10 @@
   aspect-ratio: 1/1;
   border-radius: 50%;
   transform: translateY(-7.5vw);
-  z-index: 2;
+}
+
+.tanaka:hover {
+  cursor: pointer;
 }
 
 /*Responsive*/
