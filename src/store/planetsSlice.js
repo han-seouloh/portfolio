@@ -6,31 +6,37 @@ export const planetsSlice = createSlice({
     planets: {
       about: {
         focus: false,
+        view: false,
         hover: false,
         animation: true
       },
       experience: {
         focus: false,
+        view: false,
         hover: false,
         animation: true
       },
       current: {
         focus: false,
+        view: false,
         hover: false,
         animation: true
       },
       projects: {
         focus: false,
+        view: false,
         hover: false,
         animation: true
       },
       minireddit: {
         focus: false,
+        view: false,
         hover: false,
         animation: true
       },
       tanaka: {
         focus: false,
+        view: false,
         hover: false,
         animation: true
       }
@@ -45,6 +51,12 @@ export const planetsSlice = createSlice({
     },
     setPlanetOrbit: (state, action) => {
       state.planets[action.payload.name].hover = action.payload.payload;
+    },
+    setPlanetFocus: (state, action) => {
+      state.planets[action.payload.name].focus = action.payload.payload;
+    },
+    setPlanetView: (state, action) => {
+      state.planets[action.payload.name].view = action.payload.payload;
     }
   }
 });
