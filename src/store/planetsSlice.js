@@ -62,5 +62,5 @@ export const planetsSlice = createSlice({
 });
 
 export const selectPlanets = state => state.planets;
-export const { setPlanetAnimation, setPlanetOrbit } = planetsSlice.actions;
+export const { setPlanetAnimation, setPlanetOrbit, setPlanetFocus, setPlanetView } = planetsSlice.actions;
 export default planetsSlice.reducer;
