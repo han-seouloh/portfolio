@@ -14,7 +14,7 @@ export const infoSlice = createSlice({
         cillum dolore eu fugiat nulla pariatur.`
       },
       experience:  {
-        heading: '',
+        heading: 'EXPERIENCE & STACK',
         body: ''
       },
       current:  {
