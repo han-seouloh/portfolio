@@ -6,7 +6,7 @@
   aspect-ratio: 1/1;
   outline: 1px solid lightgray;
   border-radius: 50%;
-  position: absolute;
+  position: relative;
   animation: revolve 20s linear infinite;
 }
 
@@ -25,7 +25,23 @@
   aspect-ratio: 1/1;
   border-radius: 50%;
   transform: translateY(5vw);
-  z-index: 10;
+  z-index: 3;
+  position: absolute;
+  transition: transform 1s, width 1s;
+}
+
+.about-focus {
+  transform: translateX(0);
+  width: 9vw;
+  transition: transform 1s, width 1s;
+}
+
+.about-view {
+  position: absolute;
+  width: 120vw;
+  transform: translateX(0);
+  transition: transform 1s, width 1s;
+  z-index: 3;
 }
 
 .about:hover {
@@ -41,6 +57,14 @@
     width: 2.5vh;
     transform: translateY(5vh);
   }
+  .about-focus {
+    width: 9vh;
+    transform: translateY(0);
+  }
+  
+  .about-view {
+    width: 120vh;
+  }
 }
 
 /*Animation*/
@@ -51,5 +75,11 @@
   }
   100%{
     transform:rotate(-360deg);
+  }
+}
+
+@keyframes revolve-end {
+  100% {
+    transform: rotate(-360deg);
   }
 }
