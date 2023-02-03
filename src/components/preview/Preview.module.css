@@ -1,13 +1,17 @@
 .preview {
-  transition: opacity 1s;
-  transition-delay: 1.5s;
+  position: absolute;
+  width: 25vw;
+  transition: opacity 1s, transform 2s;
 }
 
 .hidden {
   opacity: 0;
+  transform: translateX(150vw);
+  transition: opacity 1s, transform 2s;
 }
 
 .heading {
+  display: block;
   font-family: 'Bebas Neue';
 }
 
@@ -15,6 +19,11 @@
   font-family: 'Flow Circular';
   text-align: justify;
   text-align-last: left;
-  transition: font-family 2s;
+  transition: opacity 1s;
   transition-delay: 2s;
+  overflow: hidden;
+}
+
+.hidden-body {
+  opacity: 0;
 }
