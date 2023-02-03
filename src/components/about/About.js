@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectPlanets, setPlanetAnimation, setPlanetFocus, setPlanetOrbit, setPlanetView } from '../../store/planetsSlice';
+import { selectPlanets, setPlanetAnimation, setPlanetFocus, setPlanetOrbit, setPlanetView, setSelection } from '../../store/planetsSlice';
 import { Projects } from '../projects/Projects';
 import { Experience } from '../experience/Experience';
 import styles from './About.module.css';
@@ -7,12 +7,14 @@ import { selectClicks, setClickNum } from '../../store/clicksSlice';
 
 export const About = () => {
   const dispatch = useDispatch();
-  const { planets } = useSelector(selectPlanets);
+  const { planets, selection } = useSelector(selectPlanets);
   const { clickNum } = useSelector(selectClicks);
   const animation = planets.about.animation;
   const hover = planets.about.hover;
   const focus = planets.about.focus;
   const view = planets.about.view;
+  const expFocus = selection !== 'about' ? planets[selection].focus : null;
+  const expView = selection !== 'about' ? planets[selection].view : null;
 
   const handleHoverOn = () => {
     dispatch(setPlanetAnimation(false));
@@ -27,6 +29,7 @@ export const About = () => {
       case 0:
         dispatch(setPlanetFocus({name:'about', payload: true}));
         dispatch(setPlanetAnimation(true));
+        dispatch(setSelection('about'));
         dispatch(setClickNum(1));
         break;
       case 1:
@@ -62,6 +65,7 @@ export const About = () => {
           ${focus ? styles['about-focus'] : null}
           ${view ? styles['about-view'] : null}
         `}
+        style={expFocus || expView ? {'zIndex': 0} : null}
         onMouseEnter = {handleHoverOn}
         onMouseLeave = {handleHoverOff}
         onClick = {handleClick}
