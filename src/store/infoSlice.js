@@ -4,6 +4,10 @@ export const infoSlice = createSlice({
   name: 'info',
   initialState: {
     previews: {
+      default: {
+        heading: '',
+        body: ''
+      },
       about: {
         heading: 'ABOUT ME',
         body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -15,23 +19,48 @@ export const infoSlice = createSlice({
       },
       experience:  {
         heading: 'EXPERIENCE & STACK',
-        body: ''
+        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+        aute irure dolor in reprehenderit in voluptate velit esse 
+        cillum dolore eu fugiat nulla pariatur.`
       },
       current:  {
-        heading: '',
-        body: ''
+        heading: 'CURRENT PROJECTS',
+        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+        aute irure dolor in reprehenderit in voluptate velit esse 
+        cillum dolore eu fugiat nulla pariatur.`
       },
       projects:  {
-        heading: '',
-        body: ''
+        heading: 'PROJECTS',
+        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+        aute irure dolor in reprehenderit in voluptate velit esse 
+        cillum dolore eu fugiat nulla pariatur.`
       },
       minireddit:  {
-        heading: '',
-        body: ''
+        heading: 'MINIreddit',
+        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+        aute irure dolor in reprehenderit in voluptate velit esse 
+        cillum dolore eu fugiat nulla pariatur.`
       },
       tanaka:  {
-        heading: '',
-        body: ''
+        heading: 'Mrs. Tanaka (Restaurant)',
+        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+        aute irure dolor in reprehenderit in voluptate velit esse 
+        cillum dolore eu fugiat nulla pariatur.`
       }
     }
   }
