@@ -14,7 +14,7 @@ export const About = () => {
   const hover = planets.about.hover;
   const focus = planets.about.focus;
   const view = planets.about.view;
-  const otherFocus = selection !== 'about' ? planets[selection].focus : null;
+  const expFocus = planets.experience.focus;
   const otherView = selection !== 'about' ? planets[selection].view : null;
 
   const handleHoverOn = () => {
@@ -66,7 +66,7 @@ export const About = () => {
           ${focus ? styles['about-focus'] : null}
           ${view ? styles['about-view'] : null}
         `}
-        style={otherFocus || otherView ? {'zIndex': 0} : null}
+        style={ expFocus || otherView ? {'zIndex': 0, transition: 'all 0.5s linear, z-index 0s step-start'} : {transition: 'all 0.5s linear, z-index 1s step-end'}}
         onMouseEnter = {handleHoverOn}
         onMouseLeave = {handleHoverOff}
         onClick = {handleClick}

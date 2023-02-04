@@ -27,20 +27,18 @@
   transform: translateY(5vw);
   z-index: 1;
   position: absolute;
-  transition: transform 1s, width 1s;
 }
 
 .about-focus {
   transform: translateX(0);
   width: 9vw;
-  transition: transform 1s, width 1s;
+  animation: blink 1.5s ease-in-out infinite;
 }
 
 .about-view {
   position: absolute;
   width: 150vw;
   transform: translateX(0);
-  transition: transform 1s, width 1s;
   z-index: 3;
 }
 
@@ -54,7 +52,7 @@
     width: 10vh;
   }
   .about {
-    width: 2.5vh;
+    width: 3vh;
     transform: translateY(5vh);
   }
   .about-focus {
@@ -75,5 +73,17 @@
   }
   100%{
     transform:rotate(-360deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: #F5EE9E;
+  }
+  50% {
+    background-color: #fdfad2;
+  }
+  100% {
+    background-color: #F5EE9E;
   }
 }
