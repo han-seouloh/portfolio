@@ -8,13 +8,14 @@ import { selectClicks, setClickNum } from '../../store/clicksSlice';
 export const About = () => {
   const dispatch = useDispatch();
   const { planets, selection } = useSelector(selectPlanets);
-  const { clickNum } = useSelector(selectClicks);
+  const { clicks } = useSelector(selectClicks);
+  const click = clicks.about;
   const animation = planets.about.animation;
   const hover = planets.about.hover;
   const focus = planets.about.focus;
   const view = planets.about.view;
-  const expFocus = selection !== 'about' ? planets[selection].focus : null;
-  const expView = selection !== 'about' ? planets[selection].view : null;
+  const otherFocus = selection !== 'about' ? planets[selection].focus : null;
+  const otherView = selection !== 'about' ? planets[selection].view : null;
 
   const handleHoverOn = () => {
     dispatch(setPlanetAnimation(false));
@@ -25,27 +26,27 @@ export const About = () => {
     dispatch(setPlanetOrbit({name:'about', payload: false}));
   };
   const handleClick = () => {
-    switch (clickNum) {
+    switch (click) {
       case 0:
         dispatch(setPlanetFocus({name:'about', payload: true}));
         dispatch(setPlanetAnimation(true));
         dispatch(setSelection('about'));
-        dispatch(setClickNum(1));
+        dispatch(setClickNum({name:'about', clickNum: 1}));
         break;
       case 1:
         dispatch(setPlanetFocus({name:'about', payload: false}));
         dispatch(setPlanetView({name:'about', payload: true}));
         dispatch(setPlanetAnimation(true));
-        dispatch(setClickNum(2));
+        dispatch(setClickNum({name:'about', clickNum: 2}));
         break;
       case 2:
         dispatch(setPlanetView({name:'about', payload: false}));
         dispatch(setPlanetAnimation(true));
         dispatch(setPlanetOrbit({name:'about', payload: false}));
-        dispatch(setClickNum(0));
+        dispatch(setClickNum({name:'about', clickNum: 0}));
         break;
       default:
-        dispatch(setClickNum(0));
+        dispatch(setClickNum({name:'about', clickNum: 0}));
         break; 
     };
   };
@@ -65,7 +66,7 @@ export const About = () => {
           ${focus ? styles['about-focus'] : null}
           ${view ? styles['about-view'] : null}
         `}
-        style={expFocus || expView ? {'zIndex': 0} : null}
+        style={otherFocus || otherView ? {'zIndex': 0} : null}
         onMouseEnter = {handleHoverOn}
         onMouseLeave = {handleHoverOff}
         onClick = {handleClick}
