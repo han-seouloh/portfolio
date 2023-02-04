@@ -27,3 +27,12 @@
 .hidden-body {
   opacity: 0;
 }
+
+@media (orientation: portrait) {
+  .preview {
+    width: 25vh;
+  }
+  .hidden {
+    transform: translateY(150vh);
+  }
+}
