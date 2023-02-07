@@ -20,11 +20,31 @@
 }
 
 .tanaka{
+  display: flex;
   background-color: #246EB9;
   width: 3vw;
   aspect-ratio: 1/1;
   border-radius: 50%;
   transform: translateY(-7.5vw);
+  position: absolute;
+  transition: transform 1s, width 1s;
+}
+
+.tanaka-focus {
+  position: absolute;
+  transform: translateY(0);
+  width: 9vw;
+  z-index: 1;
+  transition: transform 1s, width 1s;
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+.tanaka-view {
+  position: absolute;
+  width: 150vw;
+  transform: translateY(0);
+  transition: transform 1s, width 1s;
+  z-index: 3;
 }
 
 .tanaka:hover {
@@ -38,8 +58,17 @@
     top: -7.5vh;
   }
   .tanaka {
-    width: 2.5vh;
+    width: 3vh;
     transform: translateY(-7.5vh);
+  }
+  .tanaka-focus {
+    transform: translateY(0);
+    width: 9vh;
+    z-index: 3;
+  }
+  
+  .tanaka-view {
+    width: 150vh;
   }
 }
 
@@ -51,5 +80,17 @@
   }
   100%{
     transform:rotate(-360deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: #246EB9;
+  }
+  50% {
+    background-color: #81b1e2;
+  }
+  100% {
+    background-color: #246EB9;
   }
 }
