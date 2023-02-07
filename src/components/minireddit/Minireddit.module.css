@@ -26,7 +26,25 @@
   aspect-ratio: 1/1;
   border-radius: 50%;
   transform: translateY(5vw);
-  z-index: 2;
+  z-index: 1;
+  transition: transform 1s, width 1s;
+}
+
+.minireddit-focus {
+  position: absolute;
+  transform: translateY(0);
+  width: 9vw;
+  z-index: 1;
+  transition: transform 1s, width 1s;
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+.minireddit-view {
+  position: absolute;
+  width: 150vw;
+  transform: translateY(0);
+  transition: transform 1s, width 1s;
+  z-index: 3;
 }
 
 .minireddit:hover {
@@ -40,8 +58,15 @@
     top: -5vh;
   }
   .minireddit {
-    width: 2.5vh;
+    width: 3vh;
     transform: translateY(5vh);
+  }
+  .minireddit-focus {
+    transform: translateY(0);
+    width: 9vh;
+  }
+  .minireddit-view {
+    width: 150vh;
   }
 }
 
@@ -53,5 +78,17 @@
   }
   100%{
     transform:rotate(-360deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: #C4E0F9;
+  }
+  50% {
+    background-color: #e4f3ff;
+  }
+  100% {
+    background-color: #C4E0F9;
   }
 }
