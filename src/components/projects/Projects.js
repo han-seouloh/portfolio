@@ -18,6 +18,7 @@ export const Projects = () => {
   const focus = planets.projects.focus;
   const currentFocus = planets.current.focus;
   const view = planets.projects.view;
+  const otherFocus = selection === 'minireddit' || selection === 'tanaka' ? planets[selection].focus : null;
   const otherView = selection !== 'projects' ? planets[selection].view : null;
 
   const handleHoverOn = () => {
@@ -69,7 +70,7 @@ export const Projects = () => {
           ${focus ? styles['projects-focus'] : null}
           ${view ? styles['projects-view'] : null}
         `}
-        style={ otherView ? {'zIndex': 0, transition: 'all 0.5s linear, z-index 0s step-start'} : {transition: 'all 0.5s linear, z-index 1s step-end'}}
+        style={ otherFocus || otherView ? {'zIndex': 0, transition: 'all 0.5s linear, z-index 0s step-start'} : {transition: 'all 0.5s linear, z-index 1s step-end'}}
         onMouseEnter = {handleHoverOn}
         onMouseLeave = {handleHoverOff}
         onClick = {handleClick}

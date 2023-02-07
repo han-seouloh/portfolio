@@ -5,13 +5,16 @@ import styles from './Experience.module.css';
 
 export const Experience = () => {
   const dispatch = useDispatch();
-  const { planets } = useSelector(selectPlanets);
+  const { planets, selection } = useSelector(selectPlanets);
   const { clicks } = useSelector(selectClicks);
   const click = clicks.experience;
   const animation = planets.experience.animation;
   const hover = planets.experience.hover;
   const focus = planets.experience.focus;
   const view = planets.experience.view;
+  const otherFocus = selection === 'minireddit' || selection === 'tanaka' ? planets[selection].focus : null;
+  const otherView = selection !== 'experience' ? planets[selection].view : null;
+
 
   const handleHoverOn = () => {
     dispatch(setPlanetAnimation(false));
@@ -54,6 +57,11 @@ export const Experience = () => {
         ${animation ? null : styles['pause']}
         ${hover || focus ? styles['orbit-hover'] : null}
       `}
+      style={ 
+        otherView 
+        ? {'visibility': 'collapse', transition: 'visibility 0s step-start'} 
+        : {transition: 'visibility 0.5s step-end'}
+      }
     >
       <section 
         className={`

@@ -66,7 +66,11 @@ export const About = () => {
           ${focus ? styles['about-focus'] : null}
           ${view ? styles['about-view'] : null}
         `}
-        style={ expFocus || otherView ? {'zIndex': 0, transition: 'all 0.5s linear, z-index 0s step-start'} : {transition: 'all 0.5s linear, z-index 1s step-end'}}
+        style={ 
+          expFocus || otherView 
+          ? {'visibility': 'collapse', transition: 'all 0.5s linear, visibility 0s step-start'} 
+          : {transition: 'all 0.5s linear, visibility 0.5s step-end'}
+        }
         onMouseEnter = {handleHoverOn}
         onMouseLeave = {handleHoverOff}
         onClick = {handleClick}

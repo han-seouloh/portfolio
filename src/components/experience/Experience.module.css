@@ -28,7 +28,7 @@
   transform: translateX(4vw);
   position: absolute;
   z-index: 1;
-  transition: transform 1s, width 1s;
+  transition: transform 1s, width 0.75s;
 }
 
 .experience-focus {
