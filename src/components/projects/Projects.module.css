@@ -45,6 +45,7 @@
 .projects-view {
   position: absolute;
   width: 150vw;
+  transform: translateX(0);
   transition: transform 1s, width 1s;
   z-index: 3;
 }
@@ -61,6 +62,13 @@
   .projects {
     width: 3vh;
     transform: translateY(-12.5vh);
+  }
+  .projects-focus {
+    width: 9vh;
+    transform: translateY(0);
+  }
+  .projects-view {
+    width: 150vh;
   }
 }
 
