@@ -12,7 +12,6 @@ export const Experience = () => {
   const hover = planets.experience.hover;
   const focus = planets.experience.focus;
   const view = planets.experience.view;
-  const otherFocus = selection === 'minireddit' || selection === 'tanaka' ? planets[selection].focus : null;
   const otherView = selection !== 'experience' ? planets[selection].view : null;
 
 
