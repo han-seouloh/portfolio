@@ -6,11 +6,12 @@ import styles from './CurrentProjects.module.css';
 
 export const CurrentProjects = () => {
   const dispatch = useDispatch();
-  const { planets } = useSelector(selectPlanets);
+  const { planets, selection } = useSelector(selectPlanets);
   const { clicks } = useSelector(selectClicks);
   const click = clicks.current;
   const focus = planets.current.focus;
   const view = planets.current.view;
+  const otherView = selection !== 'current' ? planets[selection].view : null;
 
   const handleHoverOn = () => {
     dispatch(setPlanetAnimation(false));
@@ -54,6 +55,7 @@ export const CurrentProjects = () => {
           ${focus ? styles['current-focus'] : null}
           ${view ? styles['current-view'] : null}
         `}
+        style={ otherView ? {'zIndex': 0, transition: 'all 0.5s linear, z-index 0s step-start'} : {transition: 'all 0.5s linear, z-index 1s step-end'}}
         onMouseEnter = {handleHoverOn}
         onMouseLeave = {handleHoverOff}
         onClick = {handleClick}
