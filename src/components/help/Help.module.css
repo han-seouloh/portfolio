@@ -1,0 +1,45 @@
+.help {
+  position: absolute;
+  top: 2.5vh;
+  right: 2.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 5vw;
+  aspect-ratio: 1/1;
+  background-color: black;
+  transition: all 1s, outline 0.5s;
+}
+
+.help-focus {
+  position: absolute;
+  top: calc(50vh - 25vw);
+  right: calc(50vw - 25vw);
+  border-radius: 50%;
+  width: 50vw;
+  aspect-ratio: 1/1;
+  background-color: gray;
+  transition: all 1s;
+}
+
+.help:hover {
+  cursor: pointer;
+  outline: 0.5vw solid lightgray;
+  transition: all 1s, outline 0.5s;
+}
+
+.disable {
+  display: none;
+}
+
+.h2 {
+  font-family: 'Bebas Neue';
+  font-size: 2vw;
+  color: white;
+  transition: transform 0.5s;
+}
+
+.help:hover h2 {
+  transform: scale(1.5);
+}
