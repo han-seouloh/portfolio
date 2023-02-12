@@ -61,7 +61,7 @@ export const Minireddit = () => {
         ? {zIndex: -1, transition: 'z-index 0s step-start'}
         : tanakaView
         ? {'visibility': 'collapse', transition: 'all 0.5s linear, visibility 0s step-start'} 
-        : {transition: 'all 0.5s linear, visibility 0.5s step-end'}
+        : {transition: 'all 0.5s linear, visibility 0.5s step-end, outline 0s'}
       }
     >
       <section 
