@@ -47,4 +47,8 @@
   .hidden {
     transform: translateY(150vh);
   }
+  .close {
+    top: -1vh;
+    font-size: 2vh;
+  }
 }
