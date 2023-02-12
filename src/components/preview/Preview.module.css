@@ -28,6 +28,18 @@
   opacity: 0;
 }
 
+.close {
+  position: absolute;
+  top: -1vw;
+  right: 0;
+  font-size: 2vw;
+}
+
+.close:hover {
+  cursor: pointer;
+  color: lightgray;
+}
+
 @media (orientation: portrait) {
   .preview {
     width: 25vh;
