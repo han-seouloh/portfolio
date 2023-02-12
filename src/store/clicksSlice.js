@@ -25,10 +25,16 @@ export const clicksSlice = createSlice({
       filteredClicks.forEach( section => {
         state.clicks[section] = 0;
       });
+    },
+    resetClicks: (state) => {
+      const clicksArray = Object.getOwnPropertyNames(state.clicks);
+      clicksArray.forEach( section => {
+        state.clicks[section] = 0;
+      });
     }
   }
 });
 
 export const selectClicks = state => state.clicks;
-export const { setClickNum } = clicksSlice.actions;
+export const { setClickNum, resetClicks } = clicksSlice.actions;
 export default clicksSlice.reducer;

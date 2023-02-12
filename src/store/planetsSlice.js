@@ -72,10 +72,17 @@ export const planetsSlice = createSlice({
     },
     setPlanetView: (state, action) => {
       state.planets[action.payload.name].view = action.payload.payload;
+    },
+    resetPlanets: (state) => {
+      const allPlanets = Object.getOwnPropertyNames(state.planets);
+      allPlanets.forEach(planet => {
+        state.planets[planet].focus = false
+        state.planets[planet].view = false
+      });
     }
   }
 });
 
 export const selectPlanets = state => state.planets;
-export const { setSelection, setPlanetAnimation, setPlanetOrbit, setPlanetFocus, setPlanetView } = planetsSlice.actions;
+export const { setSelection, setPlanetAnimation, setPlanetOrbit, setPlanetFocus, setPlanetView, resetPlanets } = planetsSlice.actions;
 export default planetsSlice.reducer;
