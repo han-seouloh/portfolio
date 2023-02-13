@@ -1,6 +1,6 @@
 .help {
   position: absolute;
-  top: 2.5vh;
+  top: 2.5vw;
   right: 2.5vw;
   display: flex;
   justify-content: center;
@@ -14,13 +14,16 @@
 
 .help-focus {
   position: absolute;
-  top: calc(50vh - 25vw);
-  right: calc(50vw - 25vw);
+  top: calc(50vh - 22vw);
+  right: calc(50vw - 22vw);
   border-radius: 50%;
-  width: 50vw;
+  width: 44vw;
   aspect-ratio: 1/1;
   background-color: gray;
   transition: all 1s;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .help:hover {
@@ -42,4 +45,98 @@
 
 .help:hover h2 {
   transform: scale(1.5);
+}
+
+.close {
+  position: absolute;
+  color: black;
+  top: 2vw;
+  right: 2vw;
+  font-size: 3vw;
+}
+
+.close:hover {
+  cursor: pointer;
+  color: lightgray;
+}
+
+.section {
+  position: relative;
+  top: 20%;
+  font-family: 'Bebas Neue';
+  width: 60%;
+  transition: opacity 0.3s ease-out;
+  transition-delay: 1s;
+}
+
+.section-off {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 3vw;
+}
+
+.section p {
+  text-align: center;
+  font-size: 2vw;
+  margin-bottom: 2vw;
+}
+
+.section li {
+  font-family: 'Roboto Condensed';
+  font-size: 1.25vw;
+  color: black;
+  text-align: justify;
+  margin-bottom: 1vw;
+}
+
+.section span {
+  color: white;
+}
+
+@media (orientation: portrait) {
+  .help {
+    top: 2.5vh;
+    right: 2.5vh;
+    width: 5vh;
+  }
+  
+  .help-focus {
+    top: calc(50vh - 22vh);
+    right: calc(50vw - 22vh);
+    width: 44vh;
+  }
+  
+  .help:hover {
+    outline: 0.5vh solid lightgray;
+  }
+  
+  .h2 {
+    font-size: 2vh;
+  }
+
+  .close {
+    top: 2vh;
+    right: 2vh;
+    font-size: 3vh;
+  }
+
+  .section h2 {
+    font-size: 3vh;
+  }
+  
+  .section p {
+    font-size: 2vh;
+    margin-bottom: 2vh;
+  }
+  
+  .section li {
+    font-size: 1.25vh;
+    margin-bottom: 1vh;
+  }
 }
