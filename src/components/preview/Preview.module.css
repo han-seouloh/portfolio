@@ -13,10 +13,13 @@
 .heading {
   display: block;
   font-family: 'Bebas Neue';
+  font-size: 2vw;
+  margin-bottom: 1vw;
 }
 
 .body {
-  font-family: 'Flow Circular';
+  font-family: 'Roboto Condensed';
+  font-size: 1.5vw;
   text-align: justify;
   text-align-last: left;
   transition: opacity 1s;
@@ -50,5 +53,12 @@
   .close {
     top: -1vh;
     font-size: 2vh;
+  }
+  .heading {
+    font-size: 2vh;
+    margin-bottom: 1vh;
+  }
+  .body {
+    font-size: 1.5vh;
   }
 }
