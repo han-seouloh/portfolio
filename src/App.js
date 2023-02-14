@@ -1,5 +1,5 @@
-import { useSelector } from 'react-redux';
-import { selectPlanets} from './store/planetsSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectPlanets, setPlanetFocus, setSelection} from './store/planetsSlice';
 
 /*Components*/
 import { About } from './components/about/About';
@@ -8,10 +8,28 @@ import { Help } from './components/help/Help';
 
 /*Styles*/
 import styles from './App.module.css';
+import { useState } from 'react';
+import { setClickNum } from './store/clicksSlice';
 
 function App() {
+  const dispatch = useDispatch();
+  const [hover, setHover] = useState(false);
   const { planets, selection } = useSelector(selectPlanets);
   const focus = planets[selection].focus;
+  const view = planets[selection].view;
+
+  const handleClick = () => {
+    dispatch(setClickNum({name: 'about', clickNum: 1}));
+    dispatch(setSelection('about'));
+    dispatch(setPlanetFocus({name: 'about', payload: true}));
+  };
+  const handleHover = () => {
+    if (hover) {
+      setHover(false);
+    } else {
+      setHover(true);
+    }
+  };
 
   return (
     <div
@@ -24,6 +42,16 @@ function App() {
         <Preview />
       </div>
       <Help />
+      <p
+        className={styles.name}
+        style={view ? {display: 'none'} : null}
+        onClick={handleClick}
+        onMouseEnter={handleHover}
+        onMouseLeave={handleHover}
+      >
+        Chan In Kwun
+        <div className={hover ? styles['underline-move'] : styles.underline}></div>
+      </p>
     </div>
   );
 }
