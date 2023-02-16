@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { CgClose } from 'react-icons/cg';
 import { useDispatch, useSelector } from 'react-redux';
 import { resetClicks } from '../../store/clicksSlice';
-import { resetPlanets, selectPlanets } from '../../store/planetsSlice';
+import { resetPlanets, selectPlanets, setSelection } from '../../store/planetsSlice';
 import styles from './Help.module.css';
 
 export const Help = () => {
@@ -12,10 +12,13 @@ export const Help = () => {
   const dispatch = useDispatch();
   
   useEffect(() => {
-    setFocus(false);
-  }, [selection, otherViews]);
+    if(selection !== 'default') {
+      setFocus(false);
+    }
+  }, [selection]);
 
   const handleClick = () => {
+    dispatch(setSelection('default'))
     dispatch(resetPlanets());
     dispatch(resetClicks());
     if (focus) {
@@ -35,6 +38,9 @@ export const Help = () => {
     >
       <h2 className={focus ? styles.disable : styles.h2}>?</h2>
       {focus && <CgClose className={styles.close}/>}
+      <div className={focus ? `${styles.signal} ${styles['signal-1']}` : styles['signal-hide']}></div>
+      <div className={focus ? `${styles.signal} ${styles['signal-2']}` : styles['signal-hide']}></div>
+      <div className={focus ? `${styles.signal} ${styles['signal-3']}` : styles['signal-hide']}></div>
       <section className={focus ? styles.section : styles['section-off']}>
         <h2>Tutorial</h2>
         <p>Interactions with planets:</p>

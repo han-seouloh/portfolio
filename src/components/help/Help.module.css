@@ -1,3 +1,33 @@
+.signal {
+  width: 44vw;
+  position: absolute;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  outline: 1px solid black;
+  transition: width 1s, opacity 1s;
+}
+
+.signal-hide {
+  position: absolute;
+  width: 5vw;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  opacity: 0;
+  transition: width 1s, opacity 1s;
+}
+
+.signal-1 {
+  animation: signal 1.5s linear infinite;
+}
+
+.signal-2 {
+  animation: signal 1.5s linear 0.5s infinite;
+}
+
+.signal-3 {
+  animation: signal 1.5s linear 1s infinite;
+}
+
 .help {
   position: absolute;
   top: 2.5vw;
@@ -24,6 +54,7 @@
   color: white;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .help:hover {
@@ -61,7 +92,7 @@
 }
 
 .section {
-  position: relative;
+  position: absolute;
   top: 20%;
   font-family: 'Bebas Neue';
   width: 60%;
@@ -138,5 +169,21 @@
   .section li {
     font-size: 1.25vh;
     margin-bottom: 1vh;
+  }
+}
+
+/*Animation*/
+@keyframes signal {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
   }
 }
