@@ -10,57 +10,43 @@ export const infoSlice = createSlice({
       },
       about: {
         heading: 'ABOUT ME',
-        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna 
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-        aute irure dolor in reprehenderit in voluptate velit esse 
-        cillum dolore eu fugiat nulla pariatur.`
+        body: `I'm Chan In Kwun, an administrative mechanical 
+        engineer graduate turned front-end developer and currently 
+        studying back-end development. In this section you'll learn
+        a bit more about me, my values and my contact information.`
       },
       experience:  {
         heading: 'EXPERIENCE & STACK',
-        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna 
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-        aute irure dolor in reprehenderit in voluptate velit esse 
-        cillum dolore eu fugiat nulla pariatur.`
+        body: `This is a section to list and display my experience
+        and the tech stack I am able to use; my education, technologies
+        and frameworks I am currently learning, and other noteworthy 
+        skills are also listed.`
       },
       current:  {
-        heading: 'CURRENT PROJECTS',
-        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna 
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-        aute irure dolor in reprehenderit in voluptate velit esse 
-        cillum dolore eu fugiat nulla pariatur.`
+        heading: 'CURRENT/FUTURE PROJECTS',
+        body: `This section is for the projects I'm currently working
+        on and the projects I have planned for the future. My vision
+        and mission can also be found here.`
       },
       projects:  {
-        heading: 'PROJECTS',
-        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna 
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-        aute irure dolor in reprehenderit in voluptate velit esse 
-        cillum dolore eu fugiat nulla pariatur.`
+        heading: 'PAST PROJECTS',
+        body: `This is a summary of my portfolio where you'll be able
+        to get a quick glance at the projects I have developed to
+        improve my skills.`
       },
       minireddit:  {
         heading: 'MINIreddit',
-        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna 
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-        aute irure dolor in reprehenderit in voluptate velit esse 
-        cillum dolore eu fugiat nulla pariatur.`
+        body: `MINIreddit is a reddit client I made to practice my
+        React and Redux skills, mainly to put to practice and learn
+        a bit more about using Redux's async thunks to connect to APIs.
+        (Desktop Website)`
       },
       tanaka:  {
-        heading: 'Mrs. Tanaka (Restaurant)',
-        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna 
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-        aute irure dolor in reprehenderit in voluptate velit esse 
-        cillum dolore eu fugiat nulla pariatur.`
+        heading: 'Señora Tanaka (Restaurant)',
+        body: `This is a demo website I made as a personal project 
+        of a restaurant in Mexico. I programmed this website without
+        resorting to any frontend framework to practice developing a
+        website purely with vanilla Javascript.`
       }
     }
   }
