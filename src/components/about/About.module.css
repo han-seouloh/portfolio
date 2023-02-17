@@ -4,14 +4,14 @@
   align-items: center;
   width: 10vw;
   aspect-ratio: 1/1;
-  outline: 1px solid lightgray;
+  border: 1px solid lightgray;
   border-radius: 50%;
   position: relative;
   animation: revolve 20s linear infinite;
 }
 
 .orbit-hover {
-  outline: 2px solid #F5EE9E;
+  border: 2px solid #F5EE9E;
 }
 
 .pause {
