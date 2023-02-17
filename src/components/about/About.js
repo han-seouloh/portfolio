@@ -16,6 +16,7 @@ export const About = () => {
   const view = planets.about.view;
   const expFocus = planets.experience.focus;
   const otherView = selection !== 'about' ? planets[selection].view : null;
+  const tanakaRedditView = selection === 'tanaka' || selection === 'minireddit'? planets[selection].view : null;
 
   const handleHoverOn = () => {
     dispatch(setPlanetAnimation(false));
@@ -66,11 +67,12 @@ export const About = () => {
           ${focus ? styles['about-focus'] : null}
           ${view ? styles['about-view'] : null}
         `}
-        style={ 
-          expFocus || otherView 
-          ? {'visibility': 'collapse', transition: 'all 0.5s, visibility 0.5s step-start'} 
-          : {transitionProperty: 'all 0.5s, visibility 0.5s step-end'}
-        }
+        style={
+          tanakaRedditView
+          ? {'zIndex': -1, transition: 'all 0.5s linear, z-index 0s step-start'}
+          : expFocus||otherView 
+          ? {'zIndex': 0, transition: 'all 0.5s linear, z-index 0s step-start'} 
+          : {transition: 'all 0.5s linear, z-index 1s step-end'}}
         onMouseEnter = {handleHoverOn}
         onMouseLeave = {handleHoverOff}
         onClick = {handleClick}
