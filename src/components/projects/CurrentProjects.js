@@ -55,7 +55,7 @@ export const CurrentProjects = () => {
           ${focus ? styles['current-focus'] : null}
           ${view ? styles['current-view'] : null}
         `}
-        style={ otherView ? {'zIndex': 0, transition: 'all 1s linear, z-index 0s step-start'} : {transition: 'all 1s linear, z-index 1s step-end'}}
+        style={ otherView ? {'zIndex': 0, transition: 'all 0.5s linear, z-index 0s step-start'} : {transition: 'all 0.5s linear, z-index 1s step-end'}}
         onMouseEnter = {handleHoverOn}
         onMouseLeave = {handleHoverOff}
         onClick = {handleClick}
