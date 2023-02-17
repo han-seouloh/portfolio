@@ -45,7 +45,7 @@ export const infoSlice = createSlice({
         heading: 'Señora Tanaka (Restaurant)',
         body: `This is a demo website I made as a personal project 
         of a restaurant in Mexico. I programmed this website without
-        resorting to any frontend framework to practice developing a
+        resorting to any frontend frameworks to practice developing a
         website purely with vanilla Javascript.`
       }
     }
