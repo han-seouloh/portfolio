@@ -27,18 +27,21 @@
   transform: translateY(5vw);
   z-index: 1;
   position: absolute;
+  transition: transform 1s, width 1s;
 }
 
 .about-focus {
   transform: translateX(0);
   width: 9vw;
   animation: blink 1.5s ease-in-out infinite;
+  transition: transform 1s, width 1s;
 }
 
 .about-view {
   position: absolute;
   width: 150vw;
   transform: translateX(0);
+  transition: transform 1s, width 1s;
   z-index: 3;
 }
 
