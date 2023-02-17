@@ -70,7 +70,7 @@ export const Projects = () => {
           ${focus ? styles['projects-focus'] : null}
           ${view ? styles['projects-view'] : null}
         `}
-        style={ otherFocus || otherView ? {'zIndex': 0, transition: 'all 0.5s linear, z-index 0s step-start'} : {transition: 'all 0.5s linear, z-index 1s step-end'}}
+        style={ otherFocus || otherView ? {'zIndex': 0, transition: 'all 1s linear, z-index 0s step-start'} : {transition: 'all 1s linear, z-index 1s step-end'}}
         onMouseEnter = {handleHoverOn}
         onMouseLeave = {handleHoverOff}
         onClick = {handleClick}
