@@ -27,12 +27,14 @@
   transform: translateY(5vw);
   z-index: 1;
   position: absolute;
+  transition: width 1s, transform 1s;
 }
 
 .about-focus {
   transform: translateX(0);
   width: 9vw;
   animation: blink 1.5s ease-in-out infinite;
+  transition: width 1s, transform 1s;
 }
 
 .about-view {
@@ -40,6 +42,7 @@
   width: 150vw;
   transform: translateX(0);
   z-index: 3;
+  transition: width 1s, transform 1s;
 }
 
 .about:hover {
