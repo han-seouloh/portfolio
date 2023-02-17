@@ -68,8 +68,8 @@ export const About = () => {
         `}
         style={ 
           expFocus || otherView 
-          ? {'visibility': 'collapse', transition: 'all 0.5s linear, visibility 0s step-start'} 
-          : {transition: 'all 0.5s linear, visibility 0.5s step-end'}
+          ? {'visibility': 'collapse', transition: 'all 1s linear, visibility 0s step-start'} 
+          : {transitionProperty: 'all 1s linear, visibility 0.5s step-end'}
         }
         onMouseEnter = {handleHoverOn}
         onMouseLeave = {handleHoverOff}
