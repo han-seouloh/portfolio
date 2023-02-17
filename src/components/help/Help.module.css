@@ -17,15 +17,15 @@
 }
 
 .signal-1 {
-  animation: signal 1.5s linear infinite;
+  animation: signal 3s linear infinite;
 }
 
 .signal-2 {
-  animation: signal 1.5s linear 0.5s infinite;
+  animation: signal 3s linear 1s infinite;
 }
 
 .signal-3 {
-  animation: signal 1.5s linear 1s infinite;
+  animation: signal 3s linear 2s infinite;
 }
 
 .help {
@@ -49,12 +49,12 @@
   border-radius: 50%;
   width: 44vw;
   aspect-ratio: 1/1;
-  background-color: gray;
   transition: all 1s;
-  color: white;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(3px);
 }
 
 .help:hover {
@@ -93,7 +93,7 @@
 
 .section {
   position: absolute;
-  top: 20%;
+  top: 15%;
   font-family: 'Bebas Neue';
   width: 60%;
   transition: opacity 0.3s ease-out;
@@ -120,17 +120,25 @@
 
 .section li {
   font-family: 'Roboto Condensed';
-  font-size: 1.25vw;
+  font-size: 1.5vw;
   color: black;
   text-align: justify;
   margin-bottom: 1vw;
 }
 
 .section span {
-  color: white;
+  color: #8a8888;
+  font-style: italic;
 }
 
 @media (orientation: portrait) {
+  .signal {
+    width: 44vh;
+  }
+  
+  .signal-hide {
+    width: 5vh;
+  }
   .help {
     top: 2.5vh;
     right: 2.5vh;
@@ -167,7 +175,7 @@
   }
   
   .section li {
-    font-size: 1.25vh;
+    font-size: 1.5vh;
     margin-bottom: 1vh;
   }
 }
@@ -178,12 +186,14 @@
     transform: scale(1);
     opacity: 0;
   }
-  50% {
-    transform: scale(1.1);
+  25%{
+    opacity: 1;
+  }
+  50%{
     opacity: 1;
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.1);
     opacity: 0;
   }
 }
