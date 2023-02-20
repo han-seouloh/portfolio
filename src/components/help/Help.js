@@ -59,6 +59,10 @@ export const Help = () => {
             of the planet.
           </li>
         </ul>
+        <span style={{marginTop: '15vw'}}>
+          For the best experience, open this portfolio from a PC or Laptop
+          web browser.
+        </span>
       </section>
     </div>
   );

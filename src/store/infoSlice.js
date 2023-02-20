@@ -17,10 +17,10 @@ export const infoSlice = createSlice({
       },
       experience:  {
         heading: 'EXPERIENCE & STACK',
-        body: `This is a section to list and display my experience
-        and the tech stack I am able to use; my education, technologies
-        and frameworks I am currently learning, and other noteworthy 
-        skills are also listed.`
+        body: `In this section I list and display my experience
+        and the tech stack I am use. I also list my education, the 
+        technologies and frameworks I am currently learning, and 
+        any other noteworthy skills.`
       },
       current:  {
         heading: 'CURRENT/FUTURE PROJECTS',
@@ -36,9 +36,9 @@ export const infoSlice = createSlice({
       },
       minireddit:  {
         heading: 'MINIreddit',
-        body: `MINIreddit is a reddit client I made to practice my
-        React and Redux skills, mainly to put to practice and learn
-        a bit more about using Redux's async thunks to connect to APIs.
+        body: `MINIreddit is a reddit client I made to test my
+        React and Redux skills, mainly to practice and learn a bit 
+        more about using Redux's async thunks to connect to APIs.
         (Desktop Website)`
       },
       tanaka:  {

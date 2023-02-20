@@ -42,16 +42,16 @@ function App() {
         <Preview />
       </div>
       <Help />
-      <p
+      <div
         className={styles.name}
         style={view ? {display: 'none'} : null}
         onClick={handleClick}
         onMouseEnter={handleHover}
         onMouseLeave={handleHover}
       >
-        Chan In Kwun
+        <p>Chan In Kwun</p>
         <div className={hover ? styles['underline-move'] : styles.underline}></div>
-      </p>
+      </div>
     </div>
   );
 }
