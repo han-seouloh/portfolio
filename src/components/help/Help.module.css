@@ -119,6 +119,10 @@
   margin-bottom: 2vw;
 }
 
+.section ul {
+  margin-bottom: 10%;
+}
+
 .section li {
   font-family: 'Roboto Condensed';
   font-size: 1.5vw;
@@ -130,6 +134,11 @@
 .section span {
   color: #8a8888;
   font-style: italic;
+}
+
+.suggestion {
+  font-size: 1vw;
+  color: red !important;
 }
 
 @media (orientation: portrait) {
