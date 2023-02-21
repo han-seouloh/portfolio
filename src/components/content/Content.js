@@ -9,7 +9,6 @@ import {CSection} from './details/CSection';
 import {PSection} from './details/PSection';
 import {MSection} from './details/MSection';
 import {TSection} from './details/TSection';
-import { current } from '@reduxjs/toolkit';
 
 export const Content = () => {
   const dispatch = useDispatch();
