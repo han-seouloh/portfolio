@@ -26,3 +26,11 @@
   transform: scale(1.2);
   transition: transform 0.2s;
 }
+
+@media (orientation: portrait) {
+  .close {
+    top: 3vh;
+    right: 3vh;
+    font-size: 3vh;
+  }
+}
