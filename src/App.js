@@ -10,6 +10,7 @@ import { Help } from './components/help/Help';
 import styles from './App.module.css';
 import { useState } from 'react';
 import { setClickNum } from './store/clicksSlice';
+import { Content } from './components/content/Content';
 
 function App() {
   const dispatch = useDispatch();
@@ -52,6 +53,7 @@ function App() {
         <p>Chan In Kwun</p>
         <div className={hover ? styles['underline-move'] : styles.underline}></div>
       </div>
+      <Content />
     </div>
   );
 }
