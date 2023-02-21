@@ -9,11 +9,21 @@ import {CSection} from './details/CSection';
 import {PSection} from './details/PSection';
 import {MSection} from './details/MSection';
 import {TSection} from './details/TSection';
+import { current } from '@reduxjs/toolkit';
 
 export const Content = () => {
   const dispatch = useDispatch();
   const { planets, selection } = useSelector(selectPlanets);
   const view = planets[selection].view;
+
+  const sections = {
+    about: <ASection />,
+    experience: <ESection />,
+    projects: <PSection />,
+    current: <CSection />,
+    minireddit: <MSection />,
+    tanaka: <TSection />
+  };
 
   const handleClick = () => {
     dispatch(resetPlanets());
@@ -24,12 +34,7 @@ export const Content = () => {
     <main
       className={view ? styles['main-content'] : styles['main-content-hidden']}
     >
-      {(view && selection === 'about') && <ASection />}
-      {(view && selection === 'experience') && <ESection />}
-      {(view && selection === 'projects') && <  PSection />}
-      {(view && selection === 'current') && <CSection />}
-      {(view && selection === 'minireddit') && <MSection />}
-      {(view && selection === 'tanaka') && <TSection />}
+      {view && sections[selection]}
       <CgClose
         className={styles.close}
         onClick={handleClick}
