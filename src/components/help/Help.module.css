@@ -85,11 +85,14 @@
   top: 2vw;
   right: 2vw;
   font-size: 3vw;
+  transition: transform 0.2s;
 }
 
 .close:hover {
   cursor: pointer;
   color: lightgray;
+  transform: scale(1.2);
+  transition: transform 0.2s;
 }
 
 .section {
