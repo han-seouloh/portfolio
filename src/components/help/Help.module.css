@@ -36,7 +36,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  width: 5vw;
+  width: 7.5vw;
   aspect-ratio: 1/1;
   background-color: black;
   transition: all 1s, border 0.5s;
@@ -70,7 +70,7 @@
 
 .h2 {
   font-family: 'Bebas Neue';
-  font-size: 2vw;
+  font-size: 3vw;
   color: white;
   transition: transform 0.5s;
 }
@@ -155,7 +155,7 @@
   .help {
     top: 2.5vh;
     right: 2.5vh;
-    width: 5vh;
+    width: 7.5vh;
   }
   
   .help-focus {
@@ -169,7 +169,7 @@
   }
   
   .h2 {
-    font-size: 2vh;
+    font-size: 3vh;
   }
 
   .close {
@@ -190,6 +190,10 @@
   .section li {
     font-size: 1.5vh;
     margin-bottom: 1vh;
+  }
+
+  .suggestion {
+    font-size: 1vh;
   }
 }
 
