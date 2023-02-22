@@ -31,10 +31,30 @@ export const sectionsSlice = createSlice({
           }
         });
       } 
+    },
+    resetSections: (state) => {
+      const aboutSections = Object.getOwnPropertyNames(state.about);
+
+      aboutSections.forEach(section => {
+        switch (section) {
+          case 'intro':
+            state.about[section] = 1
+            break;
+          case 'values':
+              state.about[section] = 0
+              break;
+          case 'hobbies':
+            state.about[section] = 3
+            break;
+          case 'contact':
+            state.about[section] = 2
+            break;
+        }
+      });
     }
   }
 });
 
 export const selectSections = state => state.sections;
-export const { handleAbout } = sectionsSlice.actions;
+export const { handleAbout, resetSections } = sectionsSlice.actions;
 export default sectionsSlice.reducer;
