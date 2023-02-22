@@ -9,6 +9,7 @@ import {CSection} from './details/CSection';
 import {PSection} from './details/PSection';
 import {MSection} from './details/MSection';
 import {TSection} from './details/TSection';
+import { resetSections } from '../../store/sectionsSlice';
 
 export const Content = () => {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ export const Content = () => {
   const handleClick = () => {
     dispatch(resetPlanets());
     dispatch(resetClicks());
+    dispatch(resetSections());
   };
 
   return (
