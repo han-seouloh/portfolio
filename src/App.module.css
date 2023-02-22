@@ -83,7 +83,7 @@
     transition: transform 1s, height 1s;
   }
   .planets-div-focus {
-    height: 40vh;
+    height: 30vh;
     transition: transform 2s, height 1s;
   }
   .info-div {
