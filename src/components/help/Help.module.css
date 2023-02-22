@@ -1,5 +1,5 @@
 .signal {
-  width: 44vw;
+  width: 45vw;
   position: absolute;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -97,9 +97,9 @@
 
 .section {
   position: absolute;
-  top: 15%;
+  top: 1.5vw;
   font-family: 'Bebas Neue';
-  width: 60%;
+  width: 75%;
   transition: opacity 0.3s ease-out;
   transition-delay: 1s;
 }
@@ -113,25 +113,25 @@
 
 .section h2 {
   text-align: center;
-  font-size: 3vw;
+  font-size: 4vw;
 }
 
 .section p {
   text-align: center;
-  font-size: 2vw;
+  font-size: 2.5vw;
   margin-bottom: 2vw;
 }
 
 .section ul {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .section li {
   font-family: 'Roboto Condensed';
-  font-size: 1.5vw;
+  font-size: 1.8vw;
   color: black;
   text-align: justify;
-  margin-bottom: 1vw;
+  margin-bottom: 0.5vw;
 }
 
 .section span {
@@ -139,14 +139,15 @@
   font-style: italic;
 }
 
-.suggestion {
-  font-size: 1vw;
-  color: red !important;
+span.suggestion {
+  text-align-last: center;
+  font-size: 1.5vw;
+  color: red;
 }
 
 @media (orientation: portrait) {
   .signal {
-    width: 44vh;
+    width: 45vh;
   }
   
   .signal-hide {
@@ -179,21 +180,21 @@
   }
 
   .section h2 {
-    font-size: 3vh;
+    font-size: 4vh;
   }
   
   .section p {
-    font-size: 2vh;
+    font-size: 2.5vh;
     margin-bottom: 2vh;
   }
   
   .section li {
-    font-size: 1.5vh;
+    font-size: 1.8vh;
     margin-bottom: 1vh;
   }
 
-  .suggestion {
-    font-size: 1vh;
+  span.suggestion {
+    font-size: 1.5vh;
   }
 }
 

@@ -1,6 +1,6 @@
 .preview {
   position: absolute;
-  width: 25vw;
+  width: 40vw;
   transition: opacity 1s, transform 2s;
 }
 
@@ -13,13 +13,13 @@
 .heading {
   display: block;
   font-family: 'Bebas Neue';
-  font-size: 2vw;
+  font-size: 4vw;
   margin-bottom: 1vw;
 }
 
 .body {
   font-family: 'Roboto Condensed';
-  font-size: 1.5vw;
+  font-size: 2vw;
   text-align: justify;
   text-align-last: left;
   transition: opacity 1s;
@@ -33,9 +33,9 @@
 
 .close {
   position: absolute;
-  top: -1vw;
-  right: 0;
-  font-size: 2vw;
+  top: 0;
+  right: -1vw;
+  font-size: 3vw;
 }
 
 .close:hover {
@@ -45,20 +45,21 @@
 
 @media (orientation: portrait) {
   .preview {
-    width: 25vh;
+    width: 35vh;
   }
   .hidden {
     transform: translateY(150vh);
   }
   .close {
-    top: -1vh;
-    font-size: 2vh;
+    top: -2vh;
+    right: -1vh;
+    font-size: 3vh;
   }
   .heading {
-    font-size: 2vh;
+    font-size: 4vh;
     margin-bottom: 1vh;
   }
   .body {
-    font-size: 1.5vh;
+    font-size: 2vh;
   }
 }

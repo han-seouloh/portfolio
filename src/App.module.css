@@ -16,11 +16,11 @@
 }
 
 .planets-div-focus {
-  width: 25vw;
+  width: 40vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: scale(0.5);
+  transform: scale(0.8);
   transition: transform 2s, width 1s;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .info-div-focus {
-  width: 25vw;
+  width: 40vw;
   transition: width 2s;
   display: flex;
   justify-content: center;
@@ -43,7 +43,7 @@
   position: absolute;
   right: 5vw;
   bottom: 5vw;
-  font-size: 2vw;
+  font-size: 3vw;
   color: black;
   overflow-x: hidden;
 }
@@ -83,23 +83,23 @@
     transition: transform 1s, height 1s;
   }
   .planets-div-focus {
-    height: 25vh;
+    height: 40vh;
     transition: transform 2s, height 1s;
   }
   .info-div {
     height: 0;
-    width: 60vw;
+    width: 80vw;
     transition: height 2s;
   }
   .info-div-focus {
-    height: 25vh;
+    height: 40vh;
     width: 80vw;
     transition: height 2s;
   }
   .name {
     right: 5vh;
     bottom: 5vh;
-    font-size: 2vh;
+    font-size: 3vh;
   }
   .underline {
     transform: translateY(-0.5vh);
