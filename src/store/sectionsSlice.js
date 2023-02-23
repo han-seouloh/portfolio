@@ -49,6 +49,8 @@ export const sectionsSlice = createSlice({
           case 'contact':
             state.about[section] = 2
             break;
+          default:
+            break;
         }
       });
     }
