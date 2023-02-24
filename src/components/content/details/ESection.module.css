@@ -46,7 +46,6 @@
   height: 100%;
   padding-right: 1vw;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
 }
 
 .content-limiter::-webkit-scrollbar {
@@ -74,8 +73,6 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  scroll-snap-align: start;
-  scroll-behavior: smooth;
 }
 
 .icons {
@@ -117,5 +114,43 @@
     height: 55vh;
     padding-right: 0;
     padding-bottom: 7.5vh;
+  }
+
+  .details h3 {
+    font-size: 4vh;
+    letter-spacing: 0.5vh;
+    line-height: 4vh;
+    margin-bottom: 0.5vh;
+  }
+  
+  .details p {
+    font-size: 2vh;
+    margin-bottom: 3vh;
+  }
+  
+  .content-limiter {
+    padding-right: 1vh;
+  }
+  
+  .content-limiter::-webkit-scrollbar {
+    width: 0.5vh;
+  }
+  
+  .content-limiter::-webkit-scrollbar-thumb {
+    border-radius: 0.25vh;
+  }
+  
+  .content-limiter::-webkit-scrollbar-track {
+    border-radius: 0.25vh;
+  }
+  
+  .icons {
+    gap: 1vh 1vh;
+    font-size: 4vh;
+  }
+  
+  .icons-2 {
+    gap: 1vh;
+    font-size: 4vh;
   }
 }
