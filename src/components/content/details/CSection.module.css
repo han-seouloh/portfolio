@@ -1,0 +1,41 @@
+.main {
+  display: flex;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 80vh;
+  font-family: 'Bebas Neue';
+  font-size: 8vw;
+  color: white;
+}
+
+.details {
+  width: 50%;
+  height: 80vh;
+  color: white;
+  padding-right: 7.5vw;
+}
+
+@media (orientation: portrait) {
+  .main {
+    flex-direction: column;
+  }
+  
+  .title {
+    width: 80vw;
+    height: 45vh;
+    font-size: 6vh;
+  }
+  
+  .details {
+    width: 80vw;
+    height: 55vh;
+    padding-right: 0;
+    padding-bottom: 7.5vh;
+  }
+}
