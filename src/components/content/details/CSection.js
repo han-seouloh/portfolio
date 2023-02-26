@@ -5,7 +5,7 @@ export const CSection = () => {
   return (
     <section className={styles.main}>
       <div className={styles.title}>
-        <div className={styles['h2-container']}>
+        <div>
           <h2>CURRENT</h2>
           <h2>PROJECTS</h2>
         </div>
