@@ -14,7 +14,7 @@
 .title h2{
   display: flex;
   font-family: 'Varela Round';
-  font-size: 8vw;
+  font-size: 7vw;
   color: red;
 }
 
@@ -31,7 +31,7 @@
   color: red;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  font-size: 10vw;
+  font-size: 8vw;
 }
 
 .details {
@@ -75,14 +75,25 @@
     width: 80vw;
     height: 40vh;
     padding-top: 5vh;
+    transition: height 1s;
+  }
+
+  .title-scroll {
+    height: 25vh;
+    border-bottom: 1px solid white;
+  }
+
+  .title-scroll h2{
+    font-size: 5vh !important;
   }
 
   .title h2{
-    font-size: 8vh;
+    font-size: 7vh;
+    transition: font-size 1s;
   }
 
   .icon-container {
-    font-size: 12vh;
+    font-size: 8vh;
   }
   
   .details {
@@ -90,6 +101,9 @@
     height: 52.5vh;
   }
   
+  .details-scroll  {
+    height: 67.5vh;
+  }
 
   .details h3 {
     font-size: 4vh;
