@@ -12,6 +12,7 @@
 
 .logo {
   width: 80%;
+  transition: width 1s;
 }
 
 .details {
@@ -59,7 +60,7 @@
   .title {
     width: 80vw;
     height: 45vh;
-    transition: height 0.5s;
+    transition: height 1s;
   }
 
   .title-scroll {
@@ -69,6 +70,7 @@
 
   .title-scroll img {
     margin-top: 2.5vh;
+    width: 70%;
   }
   
   .details {
