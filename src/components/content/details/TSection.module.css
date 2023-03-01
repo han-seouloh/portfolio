@@ -8,18 +8,17 @@
   align-items: center;
   width: 45%;
   height: 80vh;
+  transition: height 3s;
 }
 
-.title h2{
-  display: flex;
-  font-family: 'Mynerve';
-  font-size: 10vw;
-  color: white;
+.logo {
+  width: 80%;
 }
 
 .details {
   width: 47.5vw;
   height: 80vh;
+  padding-left: 2.5vw;
   color: white;
   overflow-y: scroll;
 }
@@ -53,19 +52,34 @@
   .main {
     flex-direction: column;
   }
+
+  .logo {
+    width: 100%;
+  }
   
   .title {
     width: 80vw;
     height: 45vh;
+    transition: height 0.5s;
   }
 
-  .title h2{
-    font-size: 12vh;
+  .title-scroll {
+    height: 25vh;
+    border-bottom: 1px solid white;
+  }
+
+  .title-scroll img {
+    margin-top: 2.5vh;
   }
   
   .details {
     width: 80vw;
     height: 47.5vh;
+    padding-left: 0vw;
+  }
+
+  .details-scroll  {
+    height: 67.5vh;
   }
   
 

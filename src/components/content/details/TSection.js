@@ -1,16 +1,40 @@
+import { useState } from 'react';
+import logo from '../../../resources/images/tanaka-logo.png';
 import styles from './TSection.module.css';
 
 export const TSection = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [direction, setDirection] = useState('');
+  const portrait = window.matchMedia("(orientation: portrait)").matches;
+
+  const handleScroll = ( {target} ) => {
+    const newScroll = target.scrollTop;
+
+    if (scrollY > newScroll) {
+      setDirection('up');
+      setScrollY(newScroll);
+    } else {
+      setDirection('down');
+      setScrollY(newScroll);
+    };
+
+    if (portrait) {
+      if (direction === 'down') {
+        target.parentElement.children[0].classList.add(styles['title-scroll']);
+        target.classList.add(styles['details-scroll']);
+      } else {
+        target.parentElement.children[0].classList.remove(styles['title-scroll']);
+        target.classList.remove(styles['details-scroll']);
+      }
+    };
+  };
 
   return (
     <section className={styles.main}>
       <div className={styles.title}>
-        <div>
-          <h2>SEÑORA</h2>
-          <h2>TANAKA</h2>
-        </div>
+          <img src={logo} alt='tanaka-logo' className={styles.logo} />
       </div>
-      <div className={styles.details} >
+      <div className={styles.details} onScroll={handleScroll}>
         <div className={styles.section}>
           <h3>Description</h3>
           <p>
