@@ -51,12 +51,11 @@ export const Help = () => {
           </li>
           <li>
             Click on any of the planets to focus it and
-            display a preview of the planet's content.
-            <span> (You can switch to other planets in this mode)</span>
+            display a preview of the planet's content. <span>(You can switch to other planets in this mode)</span>
           </li>
           <li>
             While focused, a second click will display the contents
-            of the planet.
+            of the planet. <span>(Scrollable)</span>
           </li>
         </ul>
         <span className={styles.suggestion}>
