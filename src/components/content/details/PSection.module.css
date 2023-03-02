@@ -57,10 +57,21 @@
   .title {
     width: 80vw;
     height: 45vh;
+    transition: height 1s;
+  }
+
+  .title-scroll {
+    height: 25vh;
+    border-bottom: 1px solid white;
+  }
+
+  .title-scroll h2{
+    font-size: 5vh !important;
   }
 
   .title h2{
     font-size: 12vh;
+    transition: font-size 1s;
   }
   
   .details {
@@ -68,6 +79,9 @@
     height: 47.5vh;
   }
   
+  .details-scroll  {
+    height: 67.5vh;
+  }
 
   .details h3 {
     font-size: 4vh;

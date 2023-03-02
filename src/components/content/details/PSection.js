@@ -1,13 +1,39 @@
+import { useState } from 'react';
 import styles from './PSection.module.css';
 
 export const PSection = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [direction, setDirection] = useState('');
+  const portrait = window.matchMedia("(orientation: portrait)").matches;
+
+  const handleScroll = ( {target} ) => {
+    const newScroll = target.scrollTop;
+
+    if (scrollY > newScroll) {
+      setDirection('up');
+      setScrollY(newScroll);
+    } else {
+      setDirection('down');
+      setScrollY(newScroll);
+    };
+
+    if (portrait) {
+      if (direction === 'down') {
+        target.parentElement.children[0].classList.add(styles['title-scroll']);
+        target.classList.add(styles['details-scroll']);
+      } else {
+        target.parentElement.children[0].classList.remove(styles['title-scroll']);
+        target.classList.remove(styles['details-scroll']);
+      }
+    };
+  };
 
   return (
     <section className={styles.main}>
       <div className={styles.title}>
         <h2>PROJECTS</h2>
       </div>
-      <div className={styles.details} >
+      <div className={styles.details} onScroll={handleScroll}>
         <div className={styles.section}>
           <h3>Description</h3>
           <p>
