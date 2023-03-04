@@ -41,14 +41,15 @@ export const ASection = () => {
           >
             <h3>Introduction</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-              sed do eiusmod tempor incididunt ut labore et dolore magna 
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-              ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              Duis aute irure dolor in reprehenderit in voluptate velit 
-              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-              occaecat cupidatat non proident, sunt in culpa qui officia 
-              deserunt mollit anim id est laborum.
+              Hi! My name is Chan In Kwun <span>(pseud. Han Seoul Oh, a korean twist
+              on the fictional character Han Solo)</span>. I am a mechanical engineer
+              with a minor in industrial engineering turned front-end engineer and
+              soon-to-be full-stack engineer.
+            </p>
+            <p className={styles.indent}>
+              During the later stages of the pandemic I had a sudden brainwave and 
+              started tinkering with Python focusing on data manipulation and analysis.
+              After a year or so I started delving into Javascript and web development.
             </p>
           </div>
           <div

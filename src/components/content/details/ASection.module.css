@@ -57,6 +57,10 @@
   transition: transform 1s, opacity 1s;
 }
 
+.slide span {
+  color: orangered;
+}
+
 .next {
   transform: translateY(-200%);
   opacity: 0;
@@ -67,7 +71,7 @@
   font-size: 4vw;
   letter-spacing: 0.5vw;
   line-height: 4vw;
-  margin-bottom: 0.5vw;
+  margin-bottom: 1vw;
 }
 
 .details p {
@@ -75,6 +79,11 @@
   font-size: 1.625vw;
   color: black;
   text-align: justify;
+  margin-bottom: 0.5vw;
+}
+
+.indent {
+  text-indent: 2vh;
 }
 
 @media (orientation: portrait) {
@@ -99,11 +108,12 @@
     font-size: 4vh;
     letter-spacing: 0.5vh;
     line-height: 4vh;
-    margin-bottom: 0.5vh;
+    margin-bottom: 1vh;
   }
   
   .details p {
     font-size: 2vh;
+    margin-bottom: 1vh;
   }
 
   .content-limiter {
