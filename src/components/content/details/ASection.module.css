@@ -83,7 +83,7 @@
 }
 
 .indent {
-  text-indent: 2vh;
+  text-indent: 2vw;
 }
 
 @media (orientation: portrait) {
@@ -124,5 +124,9 @@
     height: 10%;
     border-radius: 1vh;
     font-size: 4vh;
+  }
+
+  .indent {
+    text-indent: 2vh;
   }
 }
