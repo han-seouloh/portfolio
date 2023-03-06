@@ -9,7 +9,8 @@ export const sectionsSlice = createSlice({
       values: 4,
       hobbies: 3,
       contact: 2
-    }
+    },
+    active: false
   },
   reducers: {
     handleAbout: (state, action) => {
@@ -32,6 +33,9 @@ export const sectionsSlice = createSlice({
           }
         });
       } 
+    },
+    setActive: (state) => {
+      state.active = true;
     },
     resetSections: (state) => {
       const aboutSections = Object.getOwnPropertyNames(state.about);
@@ -57,10 +61,12 @@ export const sectionsSlice = createSlice({
             break;
         }
       });
+
+      state.active = false;
     }
   }
 });
 
 export const selectSections = state => state.sections;
-export const { handleAbout, resetSections } = sectionsSlice.actions;
+export const { handleAbout, setActive, resetSections } = sectionsSlice.actions;
 export default sectionsSlice.reducer;
