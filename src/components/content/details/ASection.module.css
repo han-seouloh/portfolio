@@ -95,6 +95,7 @@
     width: 80vw;
     height: 45vh;
     font-size: 9vh;
+    transition: height 1s, font-size 1s;
   }
   
   .details {
@@ -102,18 +103,42 @@
     height: 55vh;
     padding-right: 0;
     padding-bottom: 7.5vh;
+    transition: height 1s;
+  }
+
+  .title-active {
+    height: 25vh;
+    font-size: 7vh;
+  }
+
+  .title-active h2 {
+    margin-top: 2.5vh;
+  }
+
+  .details-active {
+    height: 75vh;
+  }
+
+  .details-active h3{
+    font-size: 4vh !important;
+  }
+
+  .details-active p{
+    font-size: 2vh !important;
   }
 
   .details h3 {
-    font-size: 4vh;
+    font-size: 3vh;
     letter-spacing: 0.5vh;
     line-height: 4vh;
     margin-bottom: 1vh;
+    transition: font-size 1s;
   }
   
   .details p {
-    font-size: 2vh;
+    font-size: 1.75vh;
     margin-bottom: 1vh;
+    transition: font-size 1s;
   }
 
   .content-limiter {
