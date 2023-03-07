@@ -93,14 +93,14 @@
   
   .title {
     width: 80vw;
-    height: 45vh;
+    height: 40vh;
     font-size: 9vh;
     transition: height 1s, font-size 1s;
   }
   
   .details {
     width: 80vw;
-    height: 55vh;
+    height: 60vh;
     padding-right: 0;
     padding-bottom: 7.5vh;
     transition: height 1s;
@@ -119,16 +119,8 @@
     height: 75vh;
   }
 
-  .details-active h3{
-    font-size: 4vh !important;
-  }
-
-  .details-active p{
-    font-size: 2vh !important;
-  }
-
   .details h3 {
-    font-size: 3vh;
+    font-size: 4vh;
     letter-spacing: 0.5vh;
     line-height: 4vh;
     margin-bottom: 1vh;
@@ -136,7 +128,7 @@
   }
   
   .details p {
-    font-size: 1.75vh;
+    font-size: 2vh;
     margin-bottom: 1vh;
     transition: font-size 1s;
   }
