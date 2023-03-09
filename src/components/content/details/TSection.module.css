@@ -48,6 +48,11 @@
   height: 100%;
 }
 
+.video-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
 @media (orientation: portrait) {
   .main {
     flex-direction: column;

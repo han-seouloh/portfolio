@@ -58,9 +58,9 @@ export const MSection = () => {
           </p>  
         </div>
         <div className={styles.section}>
-        <h3>Side Menu</h3>
+          <h3>Side Menu</h3>
           <div className={styles['video-wrapper']}>
-            <video autoPlay loop width={'100%'}>
+            <video autoPlay loop width={'101%'}>
               <source src={video1} type="video/mp4"/>
             </video>
           </div>
@@ -68,7 +68,7 @@ export const MSection = () => {
         <div className={styles.section}>
           <h3>Time Filter Functionality</h3>
           <div className={styles['video-wrapper']}>
-            <video autoPlay loop width={'100%'}>
+            <video autoPlay loop width={'101%'}>
               <source src={video2} type="video/mp4"/>
             </video>
           </div>
@@ -76,7 +76,7 @@ export const MSection = () => {
         <div className={styles.section}>
           <h3>Search Functionality</h3>
           <div className={styles['video-wrapper']}>
-            <video autoPlay loop width={'100%'}>
+            <video autoPlay loop width={'101%'}>
               <source src={video3} type="video/mp4"/>
             </video>
           </div>
@@ -84,7 +84,7 @@ export const MSection = () => {
         <div className={styles.section}>
           <h3>Posts Loading Animation</h3>
           <div className={styles['video-wrapper']}>
-            <video autoPlay loop width={'100%'}>
+            <video autoPlay loop width={'101%'}>
               <source src={video4} type="video/mp4"/>
             </video>
           </div>
@@ -92,7 +92,7 @@ export const MSection = () => {
         <div className={styles.section}>
           <h3>Comments</h3>
           <div className={styles['video-wrapper']}>
-            <video autoPlay loop width={'100%'}>
+            <video autoPlay loop width={'101%'}>
               <source src={video5} type="video/mp4"/>
             </video>
           </div>
