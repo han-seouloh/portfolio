@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import logo from '../../../resources/images/tanaka-logo.png';
+import video from '../../../resources/videos/tanaka/tanaka-general.mp4';
 import video1 from '../../../resources/videos/tanaka/tanaka-custom-dropdown.mp4';
 import video2 from '../../../resources/videos/tanaka/tanaka-sidemenu.mp4';
 import video3 from '../../../resources/videos/tanaka/tanaka-intersection-observer.mp4';
@@ -43,7 +44,7 @@ export const TSection = () => {
       </div>
       <div className={styles.details} onScroll={handleScroll}>
         <div className={styles.section}>
-          <h3>Description</h3>
+          <h3>First Look</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -55,62 +56,121 @@ export const TSection = () => {
             deserunt mollit anim id est laborum.
           </p>  
         </div>
+        <video autoPlay loop width={'100%'}>
+          <source src={video} type="video/mp4"/>
+        </video>
         <div className={styles.section}>
           <h3>Custom Dropdown Menus</h3>
-          <div className={styles['video-wrapper']}>
-            <video autoPlay loop width={'100%'}>
-              <source src={video1} type="video/mp4"/>
-            </video>
-          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit 
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+            occaecat cupidatat non proident, sunt in culpa qui officia 
+            deserunt mollit anim id est laborum.
+          </p>  
         </div>
+        <video autoPlay loop width={'100%'}>
+          <source src={video1} type="video/mp4"/>
+        </video>
         <div className={styles.section}>
           <h3>Side Menu</h3>
-          <div className={styles['video-wrapper']}>
-            <video autoPlay loop width={'100%'}>
-              <source src={video2} type="video/mp4"/>
-            </video>
-          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit 
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+            occaecat cupidatat non proident, sunt in culpa qui officia 
+            deserunt mollit anim id est laborum.
+          </p>  
         </div>
+        <video autoPlay loop width={'100%'}>
+          <source src={video2} type="video/mp4"/>
+        </video>
         <div className={styles.section}>
           <h3>Intersection Observer</h3>
-          <div className={styles['video-wrapper']}>
-            <video autoPlay loop width={'100%'}>
-              <source src={video3} type="video/mp4"/>
-            </video>
-          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit 
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+            occaecat cupidatat non proident, sunt in culpa qui officia 
+            deserunt mollit anim id est laborum.
+          </p>  
         </div>
+        <video autoPlay loop width={'100%'}>
+          <source src={video3} type="video/mp4"/>
+        </video>
         <div className={styles.section}>
           <h3>Gallery</h3>
-          <div className={styles['video-wrapper']}>
-            <video autoPlay loop width={'100%'}>
-              <source src={video4} type="video/mp4"/>
-            </video>
-          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit 
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+            occaecat cupidatat non proident, sunt in culpa qui officia 
+            deserunt mollit anim id est laborum.
+          </p>  
         </div>
+        <video autoPlay loop width={'100%'}>
+          <source src={video4} type="video/mp4"/>
+        </video>
         <div className={styles.section}>
           <h3>Blog</h3>
-          <div className={styles['video-wrapper']}>
-            <video autoPlay loop width={'100%'}>
-              <source src={video5} type="video/mp4"/>
-            </video>
-          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit 
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+            occaecat cupidatat non proident, sunt in culpa qui officia 
+            deserunt mollit anim id est laborum.
+          </p>  
         </div>
+        <video autoPlay loop width={'100%'}>
+          <source src={video5} type="video/mp4"/>
+        </video>
         <div className={styles.section}>
           <h3>Infinite Gallery</h3>
-          <div className={styles['video-wrapper']}>
-            <video autoPlay loop width={'100%'}>
-              <source src={video6} type="video/mp4"/>
-            </video>
-          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit 
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+            occaecat cupidatat non proident, sunt in culpa qui officia 
+            deserunt mollit anim id est laborum.
+          </p>  
         </div>
+        <video autoPlay loop width={'100%'}>
+          <source src={video6} type="video/mp4"/>
+        </video>
         <div className={styles.section}>
           <h3>In-Construction</h3>
-          <div className={styles['video-wrapper']}>
-            <video autoPlay loop width={'100%'}>
-              <source src={video7} type="video/mp4"/>
-            </video>
-          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit 
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+            occaecat cupidatat non proident, sunt in culpa qui officia 
+            deserunt mollit anim id est laborum.
+          </p>  
         </div>
+        <video autoPlay loop width={'100%'}>
+          <source src={video7} type="video/mp4"/>
+        </video>
       </div>
     </section>
   );
