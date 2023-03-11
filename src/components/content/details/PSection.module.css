@@ -40,6 +40,10 @@
   margin-bottom: 3vw;
 }
 
+.details video {
+  border-radius: 1vw;
+}
+
 .section {
   display: flex;
   flex-direction: column;
@@ -93,5 +97,9 @@
   .details p {
     font-size: 2vh;
     margin-bottom: 3vh;
+  }
+
+  .details video {
+    border-radius: 1vh;
   }
 }
