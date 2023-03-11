@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import redditVideo from '../../../resources/videos/minireddit/reddit-general.mp4';
+import tanakaVideo from '../../../resources/videos/tanaka/tanaka-general.mp4';
 import styles from './PSection.module.css';
 
 export const PSection = () => {
@@ -35,7 +37,7 @@ export const PSection = () => {
       </div>
       <div className={styles.details} onScroll={handleScroll}>
         <div className={styles.section}>
-          <h3>Description</h3>
+          <h3>MINIreddit</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -47,8 +49,11 @@ export const PSection = () => {
             deserunt mollit anim id est laborum.
           </p>  
         </div>
+        <video autoPlay loop width={'100%'}>
+          <source src={redditVideo} type="video/mp4"/>
+        </video>
         <div className={styles.section}>
-          <h3>Description 2</h3>
+          <h3>Sra. Tanaka</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -60,32 +65,9 @@ export const PSection = () => {
             deserunt mollit anim id est laborum.
           </p> 
         </div>
-        <div className={styles.section}>
-          <h3>Description 3</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
-          </p>   
-        </div>
-        <div className={styles.section}>
-          <h3>Description 4</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
-          </p>   
-        </div>
+        <video autoPlay loop width={'100%'}>
+          <source src={tanakaVideo} type="video/mp4"/>
+        </video>
       </div>
     </section>
   );
