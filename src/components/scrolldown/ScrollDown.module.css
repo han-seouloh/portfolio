@@ -1,0 +1,86 @@
+.scrolldown {
+  position: absolute;
+  bottom: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s;
+}
+
+.scrolldown-hide {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.scrolldown p {
+  font-size: 1vw !important;
+  margin: 0;
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  font-size: 1.5vw;
+}
+
+.arrow1 {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  animation: arrow 3s linear infinite;
+}
+
+.arrow2 {
+  position: absolute;
+  top: 0.5vw;
+  opacity: 0;
+  animation: arrow 3s linear 1s infinite;
+}
+
+.arrow3 {
+  position: absolute;
+  top: 1vw;
+  opacity: 0;
+  animation: arrow 3s linear 2s infinite;
+}
+
+@media (orientation: portrait) {
+  .scrolldown {
+    margin-top: 5vh;
+    height: 10vh;
+  }
+
+  .scrolldown p {
+    font-size: 1vh !important;
+  }
+  
+  .arrows {
+    font-size: 1.5vh;
+  }
+  
+  .arrow2 {
+    top: 0.5vh;
+  }
+  
+  .arrow3 {
+    top: 1vh;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
