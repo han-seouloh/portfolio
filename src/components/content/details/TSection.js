@@ -1,4 +1,8 @@
+import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { ScrollDown } from '../../scrolldown/ScrollDown';
+import { resetScroll, setScroll } from '../../../store/scrollSlice';
+
 import logo from '../../../resources/images/tanaka-logo.png';
 import video from '../../../resources/videos/tanaka/tanaka-general.mp4';
 import video1 from '../../../resources/videos/tanaka/tanaka-custom-dropdown.mp4';
@@ -11,6 +15,7 @@ import video7 from '../../../resources/videos/tanaka/tanaka-in-construction.mp4'
 import styles from './TSection.module.css';
 
 export const TSection = () => {
+  const dispatch = useDispatch();
   const [scrollY, setScrollY] = useState(0);
   const [direction, setDirection] = useState('');
   const portrait = window.matchMedia("(orientation: portrait)").matches;
@@ -25,6 +30,12 @@ export const TSection = () => {
       setDirection('down');
       setScrollY(newScroll);
     };
+
+    if (newScroll === 0) {
+      dispatch(resetScroll());
+    } else {
+      dispatch(setScroll());
+    }
 
     if (portrait) {
       if (direction === 'down') {
@@ -54,7 +65,8 @@ export const TSection = () => {
             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
             occaecat cupidatat non proident, sunt in culpa qui officia 
             deserunt mollit anim id est laborum.
-          </p>  
+          </p>
+          <ScrollDown />
         </div>
         <video autoPlay loop width={'100%'}>
           <source src={video} type="video/mp4"/>

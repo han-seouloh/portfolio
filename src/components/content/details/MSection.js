@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import { SiReddit } from 'react-icons/si';
+import { ScrollDown } from '../../scrolldown/ScrollDown';
+import { resetScroll, setScroll } from '../../../store/scrollSlice';
+import { useDispatch } from 'react-redux';
+
 import video from '../../../resources/videos/minireddit/reddit-general.mp4';
 import video1 from '../../../resources/videos/minireddit/reddit-sidemenu.mp4';
 import video2 from '../../../resources/videos/minireddit/reddit-time-filter.mp4';
@@ -8,7 +12,9 @@ import video4 from '../../../resources/videos/minireddit/reddit-loading.mp4';
 import video5 from '../../../resources/videos/minireddit/reddit-comments.mp4';
 import styles from './MSection.module.css';
 
+
 export const MSection = () => {
+  const dispatch = useDispatch();
   const [scrollY, setScrollY] = useState(0);
   const [direction, setDirection] = useState('');
   const portrait = window.matchMedia("(orientation: portrait)").matches;
@@ -23,6 +29,12 @@ export const MSection = () => {
       setDirection('down');
       setScrollY(newScroll);
     };
+
+    if (newScroll === 0) {
+      dispatch(resetScroll());
+    } else {
+      dispatch(setScroll());
+    }
 
     if (portrait) {
       if (direction === 'down') {
@@ -55,7 +67,8 @@ export const MSection = () => {
             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
             occaecat cupidatat non proident, sunt in culpa qui officia 
             deserunt mollit anim id est laborum.
-          </p>  
+          </p>
+          <ScrollDown />
         </div>
         <video autoPlay loop width={'100%'}>
           <source src={video} type="video/mp4"/>

@@ -1,9 +1,14 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { resetScroll, setScroll } from '../../../store/scrollSlice';
+import { ScrollDown } from '../../scrolldown/ScrollDown';
+
 import redditVideo from '../../../resources/videos/minireddit/reddit-general.mp4';
 import tanakaVideo from '../../../resources/videos/tanaka/tanaka-general.mp4';
 import styles from './PSection.module.css';
 
 export const PSection = () => {
+  const dispatch = useDispatch();
   const [scrollY, setScrollY] = useState(0);
   const [direction, setDirection] = useState('');
   const portrait = window.matchMedia("(orientation: portrait)").matches;
@@ -18,6 +23,12 @@ export const PSection = () => {
       setDirection('down');
       setScrollY(newScroll);
     };
+
+    if (newScroll === 0) {
+      dispatch(resetScroll());
+    } else {
+      dispatch(setScroll());
+    }
 
     if (portrait) {
       if (direction === 'down') {
@@ -47,7 +58,8 @@ export const PSection = () => {
             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
             occaecat cupidatat non proident, sunt in culpa qui officia 
             deserunt mollit anim id est laborum.
-          </p>  
+          </p>
+          <ScrollDown />
         </div>
         <video autoPlay loop width={'100%'}>
           <source src={redditVideo} type="video/mp4"/>
