@@ -37,7 +37,6 @@
   font-size: 1.625vw;
   color: white;
   text-align: justify;
-  margin-bottom: 3vw;
 }
 
 .details video {
@@ -96,7 +95,6 @@
   
   .details p {
     font-size: 2vh;
-    margin-bottom: 3vh;
   }
 
   .details video {

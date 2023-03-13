@@ -37,7 +37,6 @@
   font-size: 1.625vw;
   color: white;
   text-align: justify;
-  margin-bottom: 3vw;
 }
 
 .details video {
@@ -49,6 +48,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.vertical-video {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;  
   width: 100%;
   height: 100%;
 }
@@ -96,10 +105,13 @@
   
   .details p {
     font-size: 2vh;
-    margin-bottom: 3vh;
   }
 
   .details video {
     border-radius: 1vh;
+  }
+
+  .vertical-video {
+    height: 55%;
   }
 }
