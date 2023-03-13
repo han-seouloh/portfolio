@@ -31,27 +31,26 @@
   position: absolute;
   top: 0;
   opacity: 0;
-  animation: arrow 3s linear infinite;
+  animation: arrow 1.5s linear infinite;
 }
 
 .arrow2 {
   position: absolute;
   top: 0.5vw;
   opacity: 0;
-  animation: arrow 3s linear 1s infinite;
+  animation: arrow 1.5s linear 0.5s infinite;
 }
 
 .arrow3 {
   position: absolute;
   top: 1vw;
   opacity: 0;
-  animation: arrow 3s linear 2s infinite;
+  animation: arrow 1.5s linear 1s infinite;
 }
 
 @media (orientation: portrait) {
   .scrolldown {
-    margin-top: 5vh;
-    height: 10vh;
+    bottom: 10%;
   }
 
   .scrolldown p {
