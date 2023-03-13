@@ -10,6 +10,7 @@ import {PSection} from './details/PSection';
 import {MSection} from './details/MSection';
 import {TSection} from './details/TSection';
 import { resetSections } from '../../store/sectionsSlice';
+import { resetScroll } from '../../store/scrollSlice';
 
 export const Content = () => {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ export const Content = () => {
     dispatch(resetPlanets());
     dispatch(resetClicks());
     dispatch(resetSections());
+    dispatch(resetScroll());
   };
 
   return (
