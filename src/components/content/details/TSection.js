@@ -19,6 +19,12 @@ export const TSection = () => {
   const [scrollY, setScrollY] = useState(0);
   const [direction, setDirection] = useState('');
   const portrait = window.matchMedia("(orientation: portrait)").matches;
+  const websiteLink = <a
+                        className={styles.link} 
+                        href='https://mandalagroup.mx/gastronomic/restaurant/senora_tanaka'
+                        target='_blank'
+                        rel='noreferrer'
+                      >current design</a>;
 
   const handleScroll = ( {target} ) => {
     const newScroll = target.scrollTop;
@@ -55,16 +61,15 @@ export const TSection = () => {
       </div>
       <div className={styles.details} onScroll={handleScroll}>
         <div className={styles.section}>
-          <h3>First Look</h3>
+          <h3>Summary</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            This is a mock-website for the restaurant Señora Tanaka
+            based on the {websiteLink} where I reimagined some components
+            and animations for an overall better UX/UI design. This project
+            was programmed purely using vanilla Javascript, CSS and HTML to 
+            test my Javascript skills without relying on a framework and to
+            see why some of the programming community stand by using vanilla
+            Javascript for web development.
           </p>
           <ScrollDown />
         </div>
@@ -72,16 +77,13 @@ export const TSection = () => {
           <source src={video} type="video/mp4"/>
         </video>
         <div className={styles.section}>
-          <h3>Custom Dropdown Menus</h3>
+          <h3>Custom Dropdown List</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            When I first started developing this website the first hurdle came when
+            I needed a custom dropdown menu. Most websites utilize <code>&lt;select&gt;</code> tags
+            in conjunction with <code>&lt;option&gt;</code> tags but these don't allow
+            for much styling, thus I used other stylable HTML elements to create a customizable
+            dropdown list.
           </p>  
         </div>
         <video autoPlay loop width={'100%'}>
@@ -183,6 +185,16 @@ export const TSection = () => {
         <video autoPlay loop width={'100%'}>
           <source src={video7} type="video/mp4"/>
         </video>
+        <div className={styles.section}>
+          <a
+            className={styles.weblink} 
+            href='https://mx-restaurant-demo.netlify.app/' 
+            target='_blank' 
+            rel='noreferrer'
+          >
+            Visit Site
+          </a>
+        </div>
       </div>
     </section>
   );

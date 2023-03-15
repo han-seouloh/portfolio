@@ -51,6 +51,44 @@
   height: 100%;
 }
 
+.section:last-of-type {
+  justify-content: end;
+  height: 25%;
+}
+
+.section code {
+  background-color: black;
+  font-size: 1.25vw;
+}
+
+.weblink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Condensed';
+  font-size: 2vw;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  width: 15vw;
+  height: 5vw;
+  border-radius: 1vw;
+  margin-top: 2vw;
+}
+
+.weblink:hover {
+  background-color: white;
+  color: black;
+}
+
+.link {
+  color: white;
+}
+
+.link:hover {
+  color: lightskyblue;
+}
+
 @media (orientation: portrait) {
   .main {
     flex-direction: column;
@@ -61,6 +99,7 @@
   }
   
   .title {
+    position: relative;
     width: 80vw;
     height: 45vh;
     transition: height 1s;
@@ -99,6 +138,24 @@
   }
 
   .details video {
+    border-radius: 1vh;
+  }
+  
+  .section:last-of-type {
+    justify-content: start;
+    height: 40%;
+  }
+
+  .section code {
+    background-color: black;
+    font-size: 1.25vh;
+  }
+
+  .weblink {
+    margin-top: 5vh;
+    font-size: 2.5vh;
+    width: 15vh;
+    height: 5vh;
     border-radius: 1vh;
   }
 }
