@@ -43,8 +43,7 @@ export const ESection = () => {
     <section className={styles.main}>
       <div className={styles.title}>
         <h2>EXPERIENCE</h2>
-        <h2>&</h2>
-        <h2>STACK</h2>
+        <h2>& STACK</h2>
       </div>
       <div className={styles.details} onScroll={handleScroll}>
           <div className={styles.section}>
