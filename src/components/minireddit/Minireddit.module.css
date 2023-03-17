@@ -12,7 +12,7 @@
 }
 
 .orbit-hover {
-  border: 2px solid #C4E0F9;
+  border: 2px solid #59aaf1;
 }
 
 .pause {
@@ -21,7 +21,7 @@
 
 .minireddit{
   position: absolute;
-  background-color: #C4E0F9;
+  background-color: #59aaf1;
   width: 3vw;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -83,12 +83,12 @@
 
 @keyframes blink {
   0% {
-    background-color: #C4E0F9;
+    background-color: #59aaf1;
   }
   50% {
-    background-color: #e4f3ff;
+    background-color: #b6dcfd;
   }
   100% {
-    background-color: #C4E0F9;
+    background-color: #59aaf1;
   }
 }
