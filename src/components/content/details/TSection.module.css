@@ -28,7 +28,7 @@
   font-size: 4vw;
   letter-spacing: 0.5vw;
   line-height: 4vw;
-  margin-bottom: 0.5vw;
+  margin-bottom: 2.5vw;
 }
 
 .details p {
@@ -49,6 +49,10 @@
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.section-large {
+  height: 125%;
 }
 
 .section:last-of-type {
@@ -86,7 +90,7 @@
 }
 
 .link:hover {
-  color: lightskyblue;
+  color: black;
 }
 
 @media (orientation: portrait) {
@@ -130,7 +134,7 @@
     font-size: 4vh;
     letter-spacing: 0.5vh;
     line-height: 4vh;
-    margin-bottom: 0.5vh;
+    margin-bottom: 2vh;
   }
   
   .details p {

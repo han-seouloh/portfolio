@@ -64,11 +64,11 @@ export const TSection = () => {
           <h3>Summary</h3>
           <p>
             This is a mock-website for the restaurant Señora Tanaka
-            based on the {websiteLink} where I reimagined some components
+            based on the {websiteLink}, where I reimagined some components
             and animations for an overall better UX/UI design. This project
-            was programmed purely using vanilla Javascript, CSS and HTML to 
-            test my Javascript skills without relying on a framework and to
-            see why some of the programming community stand by using vanilla
+            was programmed purely using vanilla JavaScript, CSS and HTML to 
+            test my JavaScript skills without relying on a framework, and to
+            see why some members of the programming community stand by using vanilla
             Javascript for web development.
           </p>
           <ScrollDown />
@@ -79,10 +79,10 @@ export const TSection = () => {
         <div className={styles.section}>
           <h3>Custom Dropdown List</h3>
           <p>
-            When I first started developing this website the first hurdle came when
+            When I first started developing this website, the first hurdle came when
             I needed a custom dropdown menu. Most websites utilize <code>&lt;select&gt;</code> tags
             in conjunction with <code>&lt;option&gt;</code> tags but these don't allow
-            for much styling, thus I used other stylable HTML elements to create a customizable
+            for much styling. Thus, I used other stylable HTML elements to create a customizable
             dropdown list.
           </p>  
         </div>
@@ -92,14 +92,10 @@ export const TSection = () => {
         <div className={styles.section}>
           <h3>Side Menu</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            I thought the menu that pops into view from clicking on the white side tab would make 
+            more sense if it slid into view instead of popping in. I also sped up the hover and focus 
+            animations within the menu elements for a more fluid experience. Additionally, I changed 
+            the color scheme for some elements to give it a more elegant feel.
           </p>  
         </div>
         <video autoPlay loop width={'100%'}>
@@ -108,14 +104,10 @@ export const TSection = () => {
         <div className={styles.section}>
           <h3>Intersection Observer</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            For the About, Gallery, and Blog sections, I used the Intersection Observer API to trigger 
+            animations when the sections came into view. I also reimagined all the animations for these 
+            sections by playing a bit with the parallax effect, and allowed for them to be triggered each 
+            time these sections come into view, instead of only once, as many websites do.
           </p>  
         </div>
         <video autoPlay loop width={'100%'}>
@@ -124,14 +116,10 @@ export const TSection = () => {
         <div className={styles.section}>
           <h3>Gallery</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            For the Gallery, I sized the images from small to big, starting from the outermost images, to 
+            give it an illusion of depth. I also resized and cropped the images as needed into a 1:1 aspect ratio 
+            to remove the stretched look. Additionally, I integrated the buttons to explore the images to 
+            the innermost focused image to give it a cleaner look.
           </p>  
         </div>
         <video autoPlay loop width={'100%'}>
@@ -140,30 +128,27 @@ export const TSection = () => {
         <div className={styles.section}>
           <h3>Blog</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            For the Blog section, I gave the images different tempos for sliding in to achieve a parallax effect. 
+            Unlike the previous gallery, I did not want the blogs to loop. This means that once the last blog is in 
+            focus, the next button is removed. Similarly, when the first blog is visible, the previous button is 
+            removed from view. I deliberately chose to remove the looping feature in order to create a unique 
+            slideshow mechanic for the blog section.
           </p>  
         </div>
         <video autoPlay loop width={'100%'}>
           <source src={video5} type="video/mp4"/>
         </video>
-        <div className={styles.section}>
+        <div className={`${styles.section} ${styles['section-large']}`}>
           <h3>Infinite Gallery</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            To provide another way to display the image gallery, I implemented a horizontally-scrolling gallery 
+            that infinitely loops the images from one end of the viewport to another. This feature adds a dynamic 
+            element to the website's design and allows for a more interactive user experience. Although it was 
+            challenging to think of a way to keep the gallery looping smoothly, I solved it by utilizing datasets 
+            to assign one of three states to each image element: before, focused, and after. The image elements 
+            are in a 'before' state <code>(2)</code> when out of view on the right side of the viewport, a 'focused' 
+            state <code>(0)</code> when sliding into view, and an 'after' state <code>(1)</code> when sliding out of 
+            view to the left.
           </p>  
         </div>
         <video autoPlay loop width={'100%'}>
@@ -172,14 +157,12 @@ export const TSection = () => {
         <div className={styles.section}>
           <h3>In-Construction</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            As I developed this website without using any frameworks, I didn't have access to React Router for 
+            routing. To implement routing, I created a simple solution using datasets and two 
+            separate <code>&lt;main&gt;</code> elements containing the two sites in which the user would be redirected
+            between depending on the section he/she desires to visit. 
+            When the user clicks on the Events (Eventos) or Jobs (Bolsa de Trabajo) tab, they are directed to an 
+            "In Construction" page without the entire site reloading itself.
           </p>  
         </div>
         <video autoPlay loop width={'100%'}>
@@ -191,9 +174,7 @@ export const TSection = () => {
             href='https://mx-restaurant-demo.netlify.app/' 
             target='_blank' 
             rel='noreferrer'
-          >
-            Visit Site
-          </a>
+          >Visit Site</a>
         </div>
       </div>
     </section>
