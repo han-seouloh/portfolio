@@ -72,7 +72,7 @@ export const PSection = () => {
             deserunt mollit anim id est laborum.
           </p>
         </div>
-        <video autoPlay loop playsInline width={'100%'}>
+        <video autoPlay muted loop playsInline width={'100%'}>
           <source src={redditVideo} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -88,7 +88,7 @@ export const PSection = () => {
             deserunt mollit anim id est laborum.
           </p> 
         </div>
-        <video autoPlay loop playsInline width={'100%'}>
+        <video autoPlay muted loop playsInline width={'100%'}>
           <source src={tanakaVideo} type="video/mp4"/>
         </video>
       </div>

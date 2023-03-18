@@ -68,7 +68,7 @@ export const MSection = () => {
           </p>
           <ScrollDown />
         </div>
-        <video autoPlay loop playsInline width={'100%'}>
+        <video autoPlay muted loop playsInline width={'100%'}>
           <source src={video} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -80,7 +80,7 @@ export const MSection = () => {
             component displays a brief description of the selected subreddit.
           </p>  
         </div>
-        <video autoPlay loop playsInline width={'100%'}>
+        <video autoPlay muted loop playsInline width={'100%'}>
           <source src={video1} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -93,7 +93,7 @@ export const MSection = () => {
             timeframe.
           </p>  
         </div>
-        <video autoPlay loop playsInline width={'100%'}>
+        <video autoPlay muted loop playsInline width={'100%'}>
           <source src={video2} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -105,7 +105,7 @@ export const MSection = () => {
             user's search query.
           </p>  
         </div>
-        <video autoPlay loop playsInline width={'100%'}>
+        <video autoPlay muted loop playsInline width={'100%'}>
           <source src={video3} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -115,7 +115,7 @@ export const MSection = () => {
             to the Reddit API is being handled in order to load the actual content.
           </p>  
         </div>
-        <video autoPlay loop playsInline width={'100%'}>
+        <video autoPlay muted loop playsInline width={'100%'}>
           <source src={video4} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -126,7 +126,7 @@ export const MSection = () => {
             user wants to read.
           </p>  
         </div>
-        <video autoPlay loop playsInline width={'100%'}>
+        <video autoPlay muted loop playsInline width={'100%'}>
           <source src={video5} type="video/mp4"/>
         </video>
         <div className={styles.section}>
