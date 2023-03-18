@@ -39,6 +39,7 @@
   height: 80vh;
   color: white;
   overflow-y: scroll;
+  overscroll-behavior-y: none;
 }
 
 .details h3 {

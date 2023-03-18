@@ -20,6 +20,7 @@
   color: white;
   padding-right: 7.5vw;
   overflow-y: scroll;
+  overscroll-behavior-y: none;
 }
 
 .details h3 {
