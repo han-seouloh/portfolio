@@ -57,16 +57,14 @@ export const MSection = () => {
       </div>
       <div className={styles.details} onScroll={handleScroll}>
         <div className={styles.section}>
-          <h3>First Look</h3>
+          <h3>Summary</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            This is a Reddit client with a minimalistic design that allows users to browse 
+            posts and comments from pre-selected subreddits by fetching data from the Reddit 
+            JSON API. I built this as a personal project to practice my React and Redux 
+            skills. I mainly used Redux's Async Middleware to connect to and fetch data from 
+            APIs. Additionally, I practiced scraping the incoming data from the API to extract 
+            the specific information needed for the Reddit client.
           </p>
           <ScrollDown />
         </div>
@@ -76,14 +74,10 @@ export const MSection = () => {
         <div className={styles.section}>
           <h3>Side Menu</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            The side menu is the primary method for navigating between predefined subreddits
+            and selecting the timeframe for posts. The displayed posts are the top 25 posts
+            filtered by the selected time: day, month, year, or all time. Additionally, this 
+            component displays a brief description of the selected subreddit.
           </p>  
         </div>
         <video autoPlay loop width={'100%'}>
@@ -92,14 +86,11 @@ export const MSection = () => {
         <div className={styles.section}>
           <h3>Time Filter Functionality</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            As mentioned in the previous section, the Reddit client features a time selector that 
+            allows users to filter displayed posts based on their timeframe. Users can choose to 
+            see the top 25 posts of the day, month, year, or all time for the selected subreddit. 
+            This provides a convenient way to browse the most popular posts within a specific 
+            timeframe.
           </p>  
         </div>
         <video autoPlay loop width={'100%'}>
@@ -108,14 +99,10 @@ export const MSection = () => {
         <div className={styles.section}>
           <h3>Search Functionality</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            The Reddit client also includes a simple search functionality. When the user clicks 
+            "enter" or "submit" after entering a search term in the search bar, the client makes 
+            a call to the Reddit API to retrieve up to 50 posts from an endpoint that matches the 
+            user's search query.
           </p>  
         </div>
         <video autoPlay loop width={'100%'}>
@@ -124,14 +111,8 @@ export const MSection = () => {
         <div className={styles.section}>
           <h3>Posts Loading Animation</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            This is a loading component that I designed to be displayed while the fetch request 
+            to the Reddit API is being handled in order to load the actual content.
           </p>  
         </div>
         <video autoPlay loop width={'100%'}>
@@ -140,19 +121,32 @@ export const MSection = () => {
         <div className={styles.section}>
           <h3>Comments</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            This, similar to the previous component, is a loading component that I designed to 
+            display while the Reddit API is being handled to load the comments of the post the 
+            user wants to read.
           </p>  
         </div>
         <video autoPlay loop width={'100%'}>
           <source src={video5} type="video/mp4"/>
         </video>
+        <div className={styles.section}>
+          <a
+            className={styles.weblink} 
+            href='https://minireddit-client.netlify.app/' 
+            target='_blank' 
+            rel='noreferrer'
+          >Visit Site</a>
+        </div>
+        <div className={styles.section}>
+          <h3>Future Updates</h3>
+          <p>
+            In the future, if I have time, I plan to enhance this project by adding more features 
+            to improve the user experience. Some of these features include being able to vote for 
+            posts and comments, adding the ability to comment on posts, and displaying each user's 
+            Reddit avatar in the comments section. These additional features will make the Reddit 
+            client more interactive and engaging for users.
+          </p>  
+        </div>
       </div>
     </section>
   );

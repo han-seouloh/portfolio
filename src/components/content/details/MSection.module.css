@@ -46,7 +46,7 @@
   font-size: 4vw;
   letter-spacing: 0.5vw;
   line-height: 4vw;
-  margin-bottom: 0.5vw;
+  margin-bottom: 2.5vw;
 }
 
 .details p {
@@ -54,7 +54,6 @@
   font-size: 1.625vw;
   color: white;
   text-align: justify;
-  margin-bottom: 3vw;
 }
 
 .details video {
@@ -68,6 +67,39 @@
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.section:nth-last-child(2) {
+  justify-content: end;
+  height: 25%;
+}
+
+.weblink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Condensed';
+  font-size: 2vw;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  width: 15vw;
+  height: 5vw;
+  border-radius: 1vw;
+  margin-top: 2vw;
+}
+
+.weblink:hover {
+  background-color: white;
+  color: black;
+}
+
+.link {
+  color: white;
+}
+
+.link:hover {
+  color: black;
 }
 
 @media (orientation: portrait) {
@@ -113,7 +145,7 @@
     font-size: 4vh;
     letter-spacing: 0.5vh;
     line-height: 4vh;
-    margin-bottom: 0.5vh;
+    margin-bottom: 2vh;
   }
   
   .details p {
@@ -121,6 +153,19 @@
   }
 
   .details video {
+    border-radius: 1vh;
+  }
+
+  .section:last-of-type {
+    justify-content: start;
+    height: 40%;
+  }
+
+  .weblink {
+    margin-top: 5vh;
+    font-size: 2.5vh;
+    width: 15vh;
+    height: 5vh;
     border-radius: 1vh;
   }
 }
