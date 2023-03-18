@@ -28,6 +28,7 @@ export const TSection = () => {
 
   const handleScroll = ( {target} ) => {
     const newScroll = target.scrollTop;
+    const scrollLimit = target.scrollHeight;
 
     if (scrollY > newScroll) {
       setDirection('up');
@@ -45,11 +46,15 @@ export const TSection = () => {
 
     if (portrait) {
       if (direction === 'down') {
-        target.parentElement.children[0].classList.add(styles['title-scroll']);
-        target.classList.add(styles['details-scroll']);
+        if (newScroll < scrollLimit) {
+          target.parentElement.children[0].classList.add(styles['title-scroll']);
+          target.classList.add(styles['details-scroll']);
+        }
       } else {
-        target.parentElement.children[0].classList.remove(styles['title-scroll']);
-        target.classList.remove(styles['details-scroll']);
+        if (newScroll > 0) {
+          target.parentElement.children[0].classList.remove(styles['title-scroll']);
+          target.classList.remove(styles['details-scroll']);
+        }
       }
     };
   };
