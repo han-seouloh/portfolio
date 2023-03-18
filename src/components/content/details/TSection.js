@@ -28,7 +28,6 @@ export const TSection = () => {
 
   const handleScroll = ( {target} ) => {
     const newScroll = target.scrollTop;
-    const scrollLimit = target.scrollHeight;
 
     if (scrollY > newScroll) {
       setDirection('up');
