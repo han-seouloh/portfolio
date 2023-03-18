@@ -46,15 +46,11 @@ export const TSection = () => {
 
     if (portrait) {
       if (direction === 'down') {
-        if (newScroll < scrollLimit) {
-          target.parentElement.children[0].classList.add(styles['title-scroll']);
-          target.classList.add(styles['details-scroll']);
-        }
+        target.parentElement.children[0].classList.add(styles['title-scroll']);
+        target.classList.add(styles['details-scroll']);
       } else {
-        if (newScroll > 0) {
-          target.parentElement.children[0].classList.remove(styles['title-scroll']);
-          target.classList.remove(styles['details-scroll']);
-        }
+        target.parentElement.children[0].classList.remove(styles['title-scroll']);
+        target.classList.remove(styles['details-scroll']);
       }
     };
   };
