@@ -77,7 +77,7 @@ export const PSection = () => {
         <div className={styles.section}>
           <h3>Sra. Tanaka</h3>
           <p>
-            This is a prototype website for Señora Tanaka restaurant which I designed with reimagined 
+            This is a prototype website for Señora Tanaka where I redesigned some of the 
             components and animations to enhance its overall user experience and interface. The 
             project aimed to test my JavaScript skills without relying on a framework, and to explore 
             the benefits of using vanilla JavaScript for web development. The website was programmed 
