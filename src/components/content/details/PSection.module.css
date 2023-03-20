@@ -101,4 +101,8 @@
   .details video {
     border-radius: 1vh;
   }
+
+  .section:first-of-type {
+    justify-content: start;
+  }
 }

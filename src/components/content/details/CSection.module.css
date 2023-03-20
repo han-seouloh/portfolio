@@ -115,4 +115,8 @@
   .vertical-video {
     height: 55%;
   }
+  
+  .section:first-of-type {
+    justify-content: start;
+  }
 }

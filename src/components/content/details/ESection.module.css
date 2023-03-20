@@ -122,4 +122,8 @@
     gap: 1vh;
     font-size: 4vh;
   }
+  
+  .section:first-of-type {
+    justify-content: start;
+  }
 }

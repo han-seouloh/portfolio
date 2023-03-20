@@ -146,6 +146,10 @@
     border-radius: 1vh;
   }
   
+  .section:first-of-type {
+    justify-content: start;
+  }
+  
   .section:last-of-type {
     justify-content: start;
     height: 40%;
