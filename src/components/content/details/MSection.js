@@ -10,6 +10,7 @@ import video2 from '../../../resources/videos/minireddit/reddit-time-filter.mp4'
 import video3 from '../../../resources/videos/minireddit/reddit-search.mp4';
 import video4 from '../../../resources/videos/minireddit/reddit-loading.mp4';
 import video5 from '../../../resources/videos/minireddit/reddit-comments.mp4';
+import loading from '../../../resources/images/loading.gif';
 import styles from './MSection.module.css';
 
 
@@ -68,7 +69,7 @@ export const MSection = () => {
           </p>
           <ScrollDown />
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={video} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -80,7 +81,7 @@ export const MSection = () => {
             component displays a brief description of the selected subreddit.
           </p>  
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={video1} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -93,7 +94,7 @@ export const MSection = () => {
             timeframe.
           </p>  
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={video2} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -105,7 +106,7 @@ export const MSection = () => {
             user's search query.
           </p>  
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={video3} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -115,7 +116,7 @@ export const MSection = () => {
             to the Reddit API is being handled in order to load the actual content.
           </p>  
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={video4} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -126,7 +127,7 @@ export const MSection = () => {
             user wants to read.
           </p>  
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={video5} type="video/mp4"/>
         </video>
         <div className={styles.section}>
