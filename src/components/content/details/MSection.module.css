@@ -157,7 +157,7 @@
     border-radius: 1vh;
   }
 
-  .section:last-of-type {
+  .section:nth-last-child(2) {
     justify-content: start;
     height: 40%;
   }
