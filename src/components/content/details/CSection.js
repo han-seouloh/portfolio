@@ -70,7 +70,7 @@ export const CSection = () => {
           </p> 
           <ScrollDown />
         </div>
-        <video autoPlay loop width={'100%'}>
+        <video autoPlay muted loop playsInline poster width={'100%'}>
           <source src={video} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -86,7 +86,7 @@ export const CSection = () => {
             deserunt mollit anim id est laborum.
           </p>  
         </div>
-        <video autoPlay loop width={'100%'}>
+        <video autoPlay muted loop playsInline poster width={'100%'}>
           <source src={video1} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -102,7 +102,7 @@ export const CSection = () => {
             deserunt mollit anim id est laborum.
           </p>  
         </div>
-        <video autoPlay loop width={'100%'}>
+        <video autoPlay muted loop playsInline poster width={'100%'}>
           <source src={video2} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -118,7 +118,7 @@ export const CSection = () => {
             deserunt mollit anim id est laborum.
           </p>  
         </div>
-        <video autoPlay loop width={'100%'}>
+        <video autoPlay muted loop playsInline poster width={'100%'}>
           <source src={video3} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -134,7 +134,7 @@ export const CSection = () => {
             deserunt mollit anim id est laborum.
           </p>  
         </div>
-        <video autoPlay loop width={'100%'}>
+        <video autoPlay muted loop playsInline poster width={'100%'}>
           <source src={video4} type="video/mp4"/>
         </video>
         <div className={styles.section}>
