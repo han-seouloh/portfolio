@@ -5,6 +5,7 @@ import { ScrollDown } from '../../scrolldown/ScrollDown';
 
 import redditVideo from '../../../resources/videos/minireddit/reddit-general.mp4';
 import tanakaVideo from '../../../resources/videos/tanaka/tanaka-general.mp4';
+import loading from '../../../resources/images/loading.gif';
 import styles from './PSection.module.css';
 
 export const PSection = () => {
@@ -62,33 +63,28 @@ export const PSection = () => {
         <div className={styles.section}>
           <h3>MINIreddit</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            This is a simple Reddit client with a clean and minimalistic design that enables users 
+            to explore posts and comments from selected subreddits by fetching data from Reddit's 
+            JSON API. It was developed to enhance my proficiency in React and Redux, with a primary 
+            focus on utilizing Redux's Async Middleware to establish and retrieve data from APIs. 
+            I also practiced extracting the essential information needed for the Reddit client by 
+            scraping the incoming data from the API.
           </p>
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={redditVideo} type="video/mp4"/>
         </video>
         <div className={styles.section}>
           <h3>Sra. Tanaka</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+            This is a prototype website for Señora Tanaka restaurant which I designed with reimagined 
+            components and animations to enhance its overall user experience and interface. The 
+            project aimed to test my JavaScript skills without relying on a framework, and to explore 
+            the benefits of using vanilla JavaScript for web development. The website was programmed 
+            solely using vanilla JavaScript, CSS, and HTML.
           </p> 
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={tanakaVideo} type="video/mp4"/>
         </video>
       </div>
