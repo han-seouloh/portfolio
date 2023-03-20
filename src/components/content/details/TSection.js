@@ -12,6 +12,7 @@ import video4 from '../../../resources/videos/tanaka/tanaka-gallery.mp4';
 import video5 from '../../../resources/videos/tanaka/tanaka-blog.mp4';
 import video6 from '../../../resources/videos/tanaka/tanaka-infinite-gallery.mp4';
 import video7 from '../../../resources/videos/tanaka/tanaka-in-construction.mp4';
+import loading from '../../../resources/images/loading.gif';
 import styles from './TSection.module.css';
 
 export const TSection = () => {
@@ -73,7 +74,7 @@ export const TSection = () => {
           </p>
           <ScrollDown />
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={video} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -86,7 +87,7 @@ export const TSection = () => {
             dropdown list.
           </p>  
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={video1} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -98,7 +99,7 @@ export const TSection = () => {
             the color scheme for some elements to give it a more elegant feel.
           </p>  
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={video2} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -110,7 +111,7 @@ export const TSection = () => {
             time these sections come into view, instead of only once, as many websites do.
           </p>  
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={video3} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -122,7 +123,7 @@ export const TSection = () => {
             the innermost focused image to give it a cleaner look.
           </p>  
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={video4} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -135,7 +136,7 @@ export const TSection = () => {
             slideshow mechanic for the blog section.
           </p>  
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={video5} type="video/mp4"/>
         </video>
         <div className={`${styles.section} ${styles['section-large']}`}>
@@ -151,7 +152,7 @@ export const TSection = () => {
             view to the left.
           </p>  
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={video6} type="video/mp4"/>
         </video>
         <div className={styles.section}>
@@ -165,7 +166,7 @@ export const TSection = () => {
             "In Construction" page without the entire site reloading itself.
           </p>  
         </div>
-        <video autoPlay muted loop playsInline poster='' width={'100%'}>
+        <video autoPlay muted loop playsInline poster={loading} width={'100%'}>
           <source src={video7} type="video/mp4"/>
         </video>
         <div className={styles.section}>
