@@ -57,7 +57,7 @@
 }
 
 .section:last-of-type {
-  justify-content: end;
+  justify-content: start;
   height: 25%;
 }
 
