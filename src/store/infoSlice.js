@@ -16,11 +16,11 @@ export const infoSlice = createSlice({
         a bit more about me, my values and my contact information.`
       },
       experience:  {
-        heading: 'EXPERIENCE & STACK',
-        body: `In this section I list and display my experience
-        and the tech stack I am use. I also list my education, the 
-        technologies and frameworks I am currently learning, and 
-        any other noteworthy skills.`
+        heading: 'EDUCATION & STACK',
+        body: `In this section, I list and display my education as well 
+        as the tech stack I am proficient in. Additionally, I outline 
+        the technologies and frameworks I am eager to learn in the future, 
+        and highlight any other notable skills.`
       },
       current:  {
         heading: 'CURRENT/FUTURE PROJECTS',
