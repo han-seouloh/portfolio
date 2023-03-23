@@ -1,5 +1,5 @@
 import {ScrollDown} from '../../scrolldown/ScrollDown';
-import { SiBootstrap, SiCss3, SiExpress, SiHtml5, SiJavascript, SiJquery, SiNodedotjs, SiPostgresql, SiPython, SiReact, SiRedux, SiSass} from 'react-icons/si';
+import { SiBootstrap, SiCss3, SiExpress, SiGit, SiHtml5, SiJavascript, SiJquery, SiNodedotjs, SiPostgresql, SiPython, SiReact, SiRedux, SiSass, SiTypescript} from 'react-icons/si';
 import styles from './ESection.module.css';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
@@ -9,8 +9,9 @@ export const ESection = () => {
   const dispatch = useDispatch();
   const [scrollY, setScrollY] = useState(0);
   const [direction, setDirection] = useState('');
+  const [iconName, setIconName] = useState('Hover Over The Icons');
+  const [secondIconName, setSecondIconName] = useState('Hover Over The Icons');
   const portrait = window.matchMedia("(orientation: portrait)").matches;
-  let iconName = document.getElementById('icon-name');
 
   const handleScroll = ( {target} ) => {
     const newScroll = target.scrollTop;
@@ -33,137 +34,158 @@ export const ESection = () => {
       if (direction === 'down') {
         target.parentElement.children[0].classList.add(styles['title-scroll']);
         target.classList.add(styles['details-scroll']);
-        iconName.innerHTML = '';
+        setIconName('Hover Over The Icons');
+        setSecondIconName('Hover Over The Icons');
       } else {
         target.parentElement.children[0].classList.remove(styles['title-scroll']);
         target.classList.remove(styles['details-scroll']);
-        iconName.innerHTML = '';
+        setIconName('Hover Over The Icons');
+        setSecondIconName('Hover Over The Icons');
       }
     };
   };
 
-  const handleHTML = ( ) => {
-    iconName.innerHTML = 'HTML';
-  };
-  const handleCSS = ( ) => {
-    iconName.innerHTML = 'CSS';
-  };
-  const handleJavascript = ( ) => {
-    iconName.innerHTML = 'JavaScript';
-  };
-  const handleReact = ( ) => {
-    iconName.innerHTML = 'React';
-  };
-  const handleRedux = ( ) => {
-    iconName.innerHTML = 'Redux';
-  };
-  const handleJquery = ( ) => {
-    iconName.innerHTML = 'JQuery';
-  };
-  const handleBoot = ( ) => {
-    iconName.innerHTML = 'Bootstrap';
-  };
-  const handleNode = ( ) => {
-    iconName.innerHTML = 'Node';
-  };
-  const handleSass = ( ) => {
-    iconName.innerHTML = 'SASS';
-  };
-  const handlePython = ( ) => {
-    iconName.innerHTML = 'Python';
-  };
+  const iconsArray = [
+    ['html', <SiHtml5 />],
+    ['css', <SiCss3 />],
+    ['javascript', <SiJavascript />],
+    ['react', <SiReact />],
+    ['redux', <SiRedux />],
+    ['git', <SiGit />],
+    ['python', <SiPython />],
+    ['node', <SiNodedotjs />],
+    ['jquery', <SiJquery />],
+    ['bootstrap', <SiBootstrap />],
+    ['sass', <SiSass />]
+  ];
+
+  const secondIconsArray = [
+    ['expressjs', <SiExpress />],
+    ['postgresql', <SiPostgresql />],
+    ['typescript', <SiTypescript />],
+  ];
+
   const handleHide = () => {
-    iconName.innerHTML = '';
+    setIconName('Hover Over The Icons');
+  }
+  const handleSecondHide = () => {
+    setSecondIconName('Hover Over The Icons');
   }
 
   return (
     <section className={styles.main}>
       <div className={styles.title}>
-        <h2>EXPERIENCE</h2>
+        <h2>EDUCATION</h2>
         <h2>& STACK</h2>
       </div>
       <div className={styles.details} onScroll={handleScroll}>
           <div className={styles.section}>
             <h3>Stack</h3>
             <div className={styles.icons} onMouseLeave={handleHide}>
-              <SiHtml5 className={styles.icon} onMouseEnter={handleHTML}/>
-              <SiCss3 className={styles.icon} onMouseEnter={handleCSS}/>
-              <SiJavascript className={styles.icon} onMouseEnter={handleJavascript}/>
-              <SiReact className={styles.icon} onMouseEnter={handleReact}/>
-              <SiRedux className={styles.icon} onMouseEnter={handleRedux}/>
-              <SiJquery className={styles.icon} onMouseEnter={handleJquery}/>
-              <SiBootstrap className={styles.icon} onMouseEnter={handleBoot}/>
-              <SiNodedotjs className={styles.icon} onMouseEnter={handleNode}/>
-              <SiSass className={styles.icon} onMouseEnter={handleSass}/>
-              <SiPython className={styles.icon} onMouseEnter={handlePython}/>
+              {iconsArray.map( icon => (
+                <div 
+                  key={icon[0]}
+                  className={styles.icon} 
+                  onMouseEnter={() => {
+                    setIconName(icon[0]);
+                  }}
+                >
+                  {icon[1]}
+                </div>
+              ))}
             </div>
-            <p id='icon-name' className={styles['icon-name']}></p>
+            <p 
+              id='icon-name'
+              className={`
+                ${styles['icon-name']}
+                ${
+                  iconName === 'Hover Over The Icons'
+                  ? styles.blink
+                  : null
+                }
+              `}
+            >
+              {iconName}
+            </p>
             <ScrollDown />
           </div>
-          <div className={styles.section}>
+          <div className={styles.section} >
             <h3>Stack (Learning)</h3>
-            <div className={styles['icons-2']}>
-              <SiExpress />
-              <SiPostgresql />
+            <div className={styles['icons-2']} onMouseLeave={handleSecondHide}>
+              {secondIconsArray.map(icon => (
+                <div 
+                  key={icon[0]}
+                  className={styles.icon} 
+                  onMouseEnter={() => {
+                    setSecondIconName(icon[0]);
+                  }}
+                >
+                  {icon[1]}
+                </div>
+              ))}
             </div>
-            <ul className={styles.list}>
-              <p className={styles.brief}>
-                These are the languages, frameworks, libraries, and technologies I'm currently 
-                learning to become a Full-Stack developer. In the future, I plan to learn MongoDB 
-                and ThreeJS to further expand my backend development skills and increase my frontend 
-                development arsenal.
-              </p>
-              <li>
-                <h4>ExpressJS</h4>
-              </li>
-              <li>
-                <h4>PostgreSQL</h4>
-              </li>
-            </ul>
+            <p className={styles.brief}>
+              These are the languages, frameworks, libraries, and technologies I'm currently 
+              learning to become a Full-Stack developer. In the future, I plan to learn MongoDB 
+              and ThreeJS to further expand my backend development skills and increase my frontend 
+              development arsenal.
+            </p>
+            <p 
+              id='icon-name'
+              className={`
+                ${styles['icon-name']}
+                ${
+                  secondIconName === 'Hover Over The Icons'
+                  ? styles.blink
+                  : null
+                }
+              `}
+            >
+              {secondIconName}
+            </p>
           </div>
           <div className={styles.section}>
+            {/*'**Future Update: Timeline animation with scroll input**'*/}
             <h3>Education</h3>
             <ul className={styles.list}>
+              <li>
+                <h4>Full-Stack Career Path</h4>
+                <p>Codecademy</p>
+                <p>2022 - Present</p>
+              </li>
+              <li>
+                <h4>Front End Development</h4>
+                <p>FreeCodeCamp</p>
+              </li>
               <li>
                 <h4>BS in Mechanical Engineering with Minor in Industrial Engineering</h4>
                 <p>Tecnológico de Monterrey (ITESM)</p>
                 <p>Graduated with Honors</p>
               </li>
-              <li>
-                <h4>Something</h4>
-                <p></p>
-              </li>
-              <li>
-                <h4>Something</h4>
-                <p></p>
-              </li>
             </ul>
           </div>
           <div className={styles.section}>
-            <h3>Experience</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-              sed do eiusmod tempor incididunt ut labore et dolore magna 
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-              ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              Duis aute irure dolor in reprehenderit in voluptate velit 
-              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-              occaecat cupidatat non proident, sunt in culpa qui officia 
-              deserunt mollit anim id est laborum.
-            </p>
-          </div>
-          <div className={styles.section}>
-            <h3>Other Notable Skills</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-              sed do eiusmod tempor incididunt ut labore et dolore magna 
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-              ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              Duis aute irure dolor in reprehenderit in voluptate velit 
-              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-              occaecat cupidatat non proident, sunt in culpa qui officia 
-              deserunt mollit anim id est laborum.
-            </p>
+            <h3>Other Noteworthy Skills</h3>
+            <ul className={styles.list}>
+              <li>
+                <h4>Language Skills:</h4>
+                <p>English (Native)</p>
+                <p>Spanish (Native)</p>
+                <p>Korean (Native)</p>
+                <p>Japanese (Native)</p>
+                <p>Chinese (HSK3)</p>
+              </li>
+              <li>
+                <h4>3D Modeling</h4>
+                <p>SolidWorks</p>
+                <p>Blender</p>
+              </li>
+              <li>
+                <h4>Other Skills:</h4>
+                <p>Project Management</p>
+                <p>SCRUM & AGILE</p>
+              </li>
+            </ul>
           </div>
       </div>
     </section>
