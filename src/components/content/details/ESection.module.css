@@ -42,7 +42,10 @@
   width: 100%;
   font-family: 'Bebas Neue';
   font-size: 2vw;
-  margin-top: 2vw;
+}
+
+.list h4{
+  letter-spacing: 0.15vw;
 }
 
 .list p {
@@ -50,10 +53,11 @@
 }
 
 .brief {
-  margin-bottom: 2vw;
+  margin-top: 2vw;
 }
 
 .list li {
+  margin-bottom: 1vw;
   margin-left: 3vw;
 }
 
@@ -64,6 +68,10 @@
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.icon {
+  display: flex;
 }
 
 .icon:hover {
@@ -77,8 +85,8 @@
 }
 
 .icon-name {
-  position: absolute;
-  bottom: 22.5%;
+  position: relative;
+  bottom: -10%;
   font-family: 'Bebas Neue' !important;
   font-size: 2.5vw !important;
 }
@@ -97,9 +105,13 @@
   display: grid;
   gap: 2vw 5vw;
   grid-template: 
-  [row1-start] "icon icon" 1fr[row1-start];
+  [row1-start] "icon icon icon" 1fr[row1-start];
   justify-content: center;
   font-size: 4vw;
+}
+
+.blink {
+  animation: blink 3s ease-in-out infinite;
 }
 
 @media (orientation: portrait) {
@@ -129,9 +141,8 @@
   
   .details {
     width: 80vw;
-    height: 55vh;
+    height: 47.5vh;
     padding-right: 0;
-    padding-bottom: 7.5vh;
   }
 
   .details-scroll  {
@@ -169,14 +180,28 @@
 
   .list {
     font-size: 2.5vh;
-    margin-top: 2.5vh;
   }
   
   .brief {
-    margin-bottom: 2vh;
+    margin-top: 2vh;
   }
   
   .list li {
+    margin-bottom: 1vh;
     margin-left: 3vh;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
