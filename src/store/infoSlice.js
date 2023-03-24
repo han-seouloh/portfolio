@@ -24,15 +24,15 @@ export const infoSlice = createSlice({
       },
       current:  {
         heading: 'CURRENT/FUTURE PROJECTS',
-        body: `This section is for the projects I'm currently working
-        on and the projects I have planned for the future. My vision
-        and mission can also be found here.`
+        body: `This section showcases my current and future projects and serves 
+        as a platform for me to present my technical skills and interests. Here, 
+        you will find the projects I am currently working on, as well as those 
+        I plan to pursue in the future.`
       },
       projects:  {
         heading: 'PAST PROJECTS',
-        body: `This is a summary of my portfolio where you'll be able
-        to get a quick glance at the projects I have developed to
-        improve my skills.`
+        body: `This is a summary of my portfolio, where you can quickly glance 
+        at the projects I have developed to improve my skills.`
       },
       minireddit:  {
         heading: 'MINIreddit',
