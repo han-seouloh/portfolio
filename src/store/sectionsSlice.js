@@ -4,8 +4,9 @@ export const sectionsSlice = createSlice({
   name: 'sections',
   initialState: {
     about: {
-      intro: 1,
-      interests: 0,
+      welcome: 1,
+      intro: 0,
+      interests: 5,
       values: 4,
       hobbies: 3,
       contact: 2
@@ -18,7 +19,7 @@ export const sectionsSlice = createSlice({
 
       if (action.payload === 'up') {
         sections.forEach(section => {
-          if (state.about[section] >= 4) {
+          if (state.about[section] >= 5) {
             state.about[section] = 0;
           } else {
             state.about[section] += 1
@@ -27,7 +28,7 @@ export const sectionsSlice = createSlice({
       } else {
         sections.forEach(section => {
           if (state.about[section] <= 0) {
-            state.about[section] = 4;
+            state.about[section] = 5;
           } else {
             state.about[section] -= 1
           }
@@ -42,11 +43,14 @@ export const sectionsSlice = createSlice({
 
       aboutSections.forEach(section => {
         switch (section) {
-          case 'intro':
+          case 'welcome':
             state.about[section] = 1
             break;
+          case 'intro':
+            state.about[section] = 0
+            break;
           case 'interests':
-              state.about[section] = 0
+              state.about[section] = 5
               break;
           case 'values':
               state.about[section] = 4
