@@ -169,11 +169,11 @@ export const ESection = () => {
             <ul className={styles.list}>
               <li>
                 <h4>Language Skills:</h4>
-                <p>English (Native)</p>
-                <p>Spanish (Native)</p>
-                <p>Korean (Native)</p>
-                <p>Japanese (Native)</p>
-                <p>Chinese (HSK3)</p>
+                <p>English</p>
+                <p>Spanish</p>
+                <p>Korean</p>
+                <p>Japanese</p>
+                <p>Chinese</p>
               </li>
               <li>
                 <h4>3D Modeling</h4>
