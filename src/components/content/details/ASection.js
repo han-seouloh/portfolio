@@ -163,11 +163,6 @@ export const ASection = () => {
                 <p>Tinkering with electronics</p>
                 <p>Learning to program in other areas of the industry</p>
               </li>
-              <li>
-                <h4>Miscellaneous:</h4>
-                <p>Documentaries (Science and History)</p>
-                <p>Movies</p>
-              </li>
             </ul>
           </div>
           <div 
