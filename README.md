@@ -1,11 +1,10 @@
-# MINIreddit <!-- omit in toc -->
+# HanSeoulOh Portfolio <!-- omit in toc -->
 ## Table of Contents <!-- omit in toc -->
 - [Introduction](#introduction)
 - [Codebase](#codebase)
   - [Technologies](#technologies)
   - [Folder Structure](#folder-structure)
   - [Setup Process](#setup-process)
-  - [Acknowledgements](#acknowledgements)
 - [Features](#features)
 
 # Introduction
@@ -19,9 +18,7 @@
 
 ## Setup Process
 
-## Acknowledgements
-
 # Features
-<video muted loop autoplay>
-  <source src='./src/resources/videos/minireddit/reddit-comments.mp4' type="video/mp4"/>
-</video>
+<p align="center">
+  <img src="./src/resources/images/portfolio-gifs/main.gif" alt="First Look" />
+</p>
