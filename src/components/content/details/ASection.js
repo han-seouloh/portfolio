@@ -1,4 +1,7 @@
-import { HiChevronUp, HiChevronDown } from 'react-icons/hi'
+import { HiChevronUp, HiChevronDown } from 'react-icons/hi';
+import { MdLocationPin } from 'react-icons/md';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
+import { IoIosMail } from 'react-icons/io';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectPlanets } from '../../../store/planetsSlice';
 import { handleAbout, setActive, selectSections } from '../../../store/sectionsSlice';
@@ -8,7 +11,7 @@ export const ASection = () => {
   const dispatch  = useDispatch();
   const { planets } = useSelector(selectPlanets);
   const { about, active } = useSelector(selectSections);
-  const { intro, interests, values, hobbies, contact } = about;
+  const { welcome, intro, interests, values, hobbies, contact } = about;
   const view = planets.about.view;
 
   const handlePrev = () => {
@@ -40,6 +43,26 @@ export const ASection = () => {
           <HiChevronUp />
         </div>
         <div className={styles['content-limiter']}>
+        <div 
+            className={`
+              ${styles.slide}
+              ${welcome < 1
+                ? styles.prev 
+                : welcome > 1
+                ? styles.next
+                : null
+              }
+            `}
+          >
+            <h3>Welcome</h3>
+            <p>
+            Welcome to my portfolio! Here, you can browse through the projects I have 
+            developed to enhance my skills as a developer. Whether it's building web 
+            applications, designing user interfaces, or exploring new technologies, I'm 
+            passionate about pushing my limits and creating meaningful solutions. Take a 
+            look at my work and feel free to contact me with any questions or feedback.
+            </p>
+          </div>
           <div 
             className={`
               ${styles.slide}
@@ -61,7 +84,7 @@ export const ASection = () => {
             <p className={styles.indent}>
               During the later stages of the pandemic I started tinkering with Python
               focusing on data manipulation and analysis. After a year or so I started
-              delving into Javascript and web development and I have come to love the
+              delving into Javascript and web development and I have grown fond of the
               programming world and its endless possibilities ever since.
             </p>
           </div>
@@ -76,17 +99,17 @@ export const ASection = () => {
               }
             `}
           >
-            <h3>Interests</h3>
+            <h3>Professional Development</h3>
             <p>
               Staying up to date with the forefront of this ever-changing industry
               and learning ways to write better and more efficient code is
               what keeps me passionate about and interested in this career path.
             </p>
             <p className={styles.indent}>
-              As my understanding of the inner workings of web development
-              grew, so did my curiosity for the other branches of programming
-              in the industry (machine learning, game dev, data analysis, etc.)
-              some of which I pursue and learn about as a hobby.
+              In addition to web development, I also explore and study other areas of 
+              the programming industry as a hobby. As a lifelong learner, I'm always 
+              looking for new challenges and opportunities to expand my skillset and 
+              stay up-to-date with the latest trends and technologies.
             </p>
           </div>
           <div
@@ -102,20 +125,14 @@ export const ASection = () => {
           >
             <h3>Ideology <br/> and Values</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-              sed do eiusmod tempor incididunt ut labore et dolore magna 
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-              ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              Duis aute irure dolor in reprehenderit in voluptate velit 
-              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-              occaecat cupidatat non proident, sunt in culpa qui officia 
-              deserunt mollit anim id est laborum.
+              As a programmer, I understand that there is always something new to learn from every individual 
+              since each has their own unique thought process that can bring new and creative solutions to problems. 
             </p>
             <p className={styles.indent}>
-              There's also how there's always something to learn from everyone
-              since every programmer's thought process is a bit unique and many times
-              come up with many different and creative ways to solve the same
-              problem.
+              I value collaboration and teamwork, and I am always eager to share information and knowledge 
+              with others to help improve the effectiveness and productivity of the team as a whole. By 
+              fostering a culture of learning and mutual support, we can achieve great things and create 
+              innovative solutions to complex challenges.
             </p>
           </div>
           <div 
@@ -130,16 +147,28 @@ export const ASection = () => {
             `}
           >
             <h3>Hobbies</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-              sed do eiusmod tempor incididunt ut labore et dolore magna 
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-              ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              Duis aute irure dolor in reprehenderit in voluptate velit 
-              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-              occaecat cupidatat non proident, sunt in culpa qui officia 
-              deserunt mollit anim id est laborum.
-            </p>
+            <ul className={styles.list}>
+              <li>
+                <h4>Music:</h4>
+                <p>Singing</p>
+                <p>Instruments</p>
+              </li>
+              <li>
+                <h4>Health:</h4>
+                <p>Gym</p>
+                <p>Basketball</p>
+              </li>
+              <li>
+                <h4>Technology:</h4>
+                <p>Tinkering with electronics</p>
+                <p>Learning to program in other areas of the industry</p>
+              </li>
+              <li>
+                <h4>Miscellaneous:</h4>
+                <p>Documentaries (Science and History)</p>
+                <p>Movies</p>
+              </li>
+            </ul>
           </div>
           <div 
             className={`
@@ -153,16 +182,30 @@ export const ASection = () => {
             `}
           >
             <h3>Contact</h3>
-            <p>
-              Lorem dolor sit amet, consectetur adipiscing elit, 
-              sed do eiusmod tempor incididunt ut labore et dolore magna 
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-              ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              Duis aute irure dolor in reprehenderit in voluptate velit 
-              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-              occaecat cupidatat non proident, sunt in culpa qui officia 
-              deserunt mollit anim id est laborum.
+            <p className={styles['icon-text']}>
+              <MdLocationPin style={{color: 'red'}} className={styles.icon}/>
+              Guadalajara, Jalisco, Mexico
             </p>
+            <p className={styles['icon-text']}>
+              <IoIosMail style={{color: 'white'}} className={styles.icon}/>
+              kwunchanin@gmail.com
+            </p>
+            <div className={styles.icons}>
+              <a 
+                href='https://www.linkedin.com/in/kwunchanin/' 
+                target='_blank' 
+                rel='noreferrer'
+              >
+                <SiLinkedin className={styles.icon}/>
+              </a>
+              <a 
+                href='https://github.com/han-seouloh' 
+                target='_blank' 
+                rel='noreferrer'
+              >
+                <SiGithub className={styles.icon}/>
+              </a>
+            </div>
           </div>
         </div>
         <div className={styles['content-slider']} onClick={handleNext}>
