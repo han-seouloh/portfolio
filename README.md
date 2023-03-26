@@ -36,14 +36,14 @@ Frameworks/Libraries Used:
 ## Folder Structure
 ```sh
 portfolio/
-├── public      # Public files
-└── src         # Source files
+├── public                  # Public files
+└── src                     # Source files
 portfolio/src
-├── components  # Reusable components
-├── resources   # Resources
-|   ├── images  # Image and gif files
-|   └── videos  # Video files
-└── store       # Redux store and slices
+├── components              # Reusable components
+├── resources               # Resources
+│   ├── images              # Image and gif files
+│   └── videos              # Video files
+└── store                   # Redux store and slices
 ```
 <br />
 
