@@ -107,7 +107,7 @@ I created a simple media query in CSS to detect a portrait viewport as a mobile 
     alt="Responsive Design"
   />
   <img 
-    src="./src/resources/images/portfolio/responsive1.gif"
+    src="./src/resources/images/portfolio/responsive2.gif"
     alt="Responsive Design"
   />
 </p>
