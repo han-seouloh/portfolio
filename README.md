@@ -59,8 +59,8 @@ As you explore my portfolio, you'll discover a series of planets, each containin
 <br />
 <p align="center">
   <img 
-    src="./src/resources/images/portfolio/main.gif"
-    alt="First Look"
+    src="./src/resources/images/portfolio/planets.gif"
+    alt="Planets"
   />
 </p>
 <br />
@@ -70,8 +70,8 @@ Each planet has a hover stop feature allowing for a smoother planet selection by
 <br />
 <p align="center">
   <img 
-    src="./src/resources/images/portfolio/main.gif"
-    alt="First Look"
+    src="./src/resources/images/portfolio/hover.gif"
+    alt="Hover Stop"
   />
 </p>
 <br />
@@ -81,8 +81,8 @@ A help section has been added in the upper left corner, represented by a questio
 <br />
 <p align="center">
   <img 
-    src="./src/resources/images/portfolio/main.gif"
-    alt="First Look"
+    src="./src/resources/images/portfolio/help.gif"
+    alt="Help"
   />
 </p>
 <br />
@@ -92,8 +92,8 @@ I tested two different ways for users to view the content of each section to see
 <br />
 <p align="center">
   <img 
-    src="./src/resources/images/portfolio/main.gif"
-    alt="First Look"
+    src="./src/resources/images/portfolio/content.gif"
+    alt="Content"
   />
 </p>
 <br />
@@ -103,8 +103,12 @@ I created a simple media query in CSS to detect a portrait viewport as a mobile 
 <br />
 <p align="center">
   <img 
-    src="./src/resources/images/portfolio/main.gif"
-    alt="First Look"
+    src="./src/resources/images/portfolio/responsive1.gif"
+    alt="Responsive Design"
+  />
+  <img 
+    src="./src/resources/images/portfolio/responsive1.gif"
+    alt="Responsive Design"
   />
 </p>
 <br />
