@@ -12,6 +12,7 @@
   - [Content](#content)
   - [Responsive Design](#responsive-design)
 - [Acknowledgements](#acknowledgements)
+- [Future Updates](#future-updates)
 
 # Introduction
 This is my portfolio website featuring a solar system-inspired design **based on Ptolemy's model** of the solar system that allows users to interact with each planet, each representing a section of my portfolio. I designed and developed the website from start to finish using **ReactJS and Redux** to ensure that the user experience matches my vision as closely as possible based on my current skill set. So go ahead, explore the galaxy of my work and see what each planet has to offer!
@@ -118,3 +119,5 @@ These other dependencies used to build this project:
 - react-icons
 - react-intersection-observer
 
+# Future Updates
+- [ ] Redesign education section as a dynamic timeline.
